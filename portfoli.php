@@ -5,8 +5,8 @@
 <head>
 
     <?php
-	include "header_link_file.php";
-	?>
+    include "header_link_file.php";
+    ?>
 
 </head>
 
@@ -16,9 +16,9 @@
 
 
     <?php
-	include "./include_section/top_navbar.php";
+    include "./include_section/top_navbar.php";
     include "./config/server_connect.php";
-	?>
+    ?>
 
     <!-- /main navbar -->
 
@@ -30,8 +30,8 @@
 
             <!-- Main sidebar -->
             <?php
-			include "./include_section/main_sidebar.php";
-			?>
+            include "./include_section/main_sidebar.php";
+            ?>
             <!-- /main sidebar -->
 
 
@@ -70,84 +70,75 @@
                                         </div>
                                     </div>
                                     <!--================================================================  -->
+
+
                                     <!-- Horizontal form modal -->
                                     <div id="modal_form_horizontal" class="modal fade">
                                         <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
                                                 <div class="modal-header">
-                                                    <button type="button" class="close"
-                                                        data-dismiss="modal">&times;</button>
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                     <h5 class="modal-title">Portfolio Update</h5>
                                                 </div>
 
-                                                <form action="#" class="form-horizontal">
+                                                <form action="./config/portfolio_controlar.php" class="form-horizontal" method="POST">
                                                     <div class="modal-body">
                                                         <div class="form-group">
-                                                            <label class="control-label col-sm-3">Project Name</label>
+                                                            <label class="control-label col-sm-3" for="ProjectName">Project Name</label>
                                                             <div class="col-sm-9">
-                                                                <input type="text" placeholder="Type your project name"
-                                                                    class="form-control">
+                                                                <input type="text" placeholder="Type your project name" class="form-control" id="ProjectName" name="projectName">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label class="control-label col-sm-3">Project Bio</label>
+                                                            <label class="control-label col-sm-3" for="ProjectBio">Project Bio</label>
                                                             <div class="col-sm-9">
-                                                                <input type="text"
-                                                                    placeholder="Type your project short discription "
-                                                                    class="form-control">
+                                                                <input type="text" placeholder="Type your project short discription " class="form-control" id="ProjectBio" name="projectBio">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label class="control-label col-sm-3">Catagory</label>
+                                                            <label class="control-label col-sm-3" for="Catagory">Catagory</label>
                                                             <div class="col-sm-9">
-                                                                <input type="text"
-                                                                    placeholder="Select or Type your catagory"
-                                                                    class="form-control">
+                                                                <input type="text" placeholder="Select or Type your catagory" class="form-control" id="Catagory" name="catagory">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label class="control-label col-sm-3">Clint Name</label>
+                                                            <label class="control-label col-sm-3" for="ClintName">Clint Name</label>
                                                             <div class="col-sm-9">
-                                                                <input type="text" placeholder="Clint Name"
-                                                                    class="form-control">
+                                                                <input type="text" placeholder="Clint Name" class="form-control" id="ClintName" name="cintName">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label class="control-label col-sm-3">Project
+                                                            <label class="control-label col-sm-3" for="ProjectLanguage">Project
                                                                 Language</label>
                                                             <div class="col-sm-9">
-                                                                <input type="text"
-                                                                    placeholder="Type your project language Ex: HTML, CSS, JavaScript"
-                                                                    class="form-control">
+                                                                <input type="text" placeholder="Type your project language Ex: HTML, CSS, JavaScript" class="form-control" id="ProjectLanguage" name="projectLanguage">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label class="control-label col-sm-3">Project Preview
+                                                            <label class="control-label col-sm-3" for="ProjectPreview">Project Preview
                                                                 Link</label>
                                                             <div class="col-sm-9">
-                                                                <input type="text" placeholder="Project Preview link"
-                                                                    class="form-control">
+                                                                <input type="text" placeholder="Project Preview link" class="form-control" id="ProjectPreview" name="projectPreview">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-group">
-                                                            <label class="control-label col-sm-3">Image</label>
+                                                            <label class="control-label col-sm-3" for="Image">Image</label>
                                                             <div class="col-sm-9">
-                                                                <input type="file" placeholder="" class="form-control">
+                                                                <input type="file" class="form-control" id="Image">
                                                             </div>
                                                         </div>
                                                     </div>
 
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-link"
-                                                            data-dismiss="modal">Close</button>
-                                                        <button type="submit" class="btn btn-primary">Submit
-                                                            form</button>
+                                                        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
+                                                        <button type="submit" class="btn btn-primary" name="addPortfolio">Add Project
+                                                        </button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -160,13 +151,32 @@
                                         <code> Catagory </code> & <code>ect. </code> You can also add your code> Add
                                         Project </code> here.
 
+
+
                                         <div class="text-right">
-                                            <a href="add_portfolio.php"><button type="button"
-                                                    class="btn btn-primary">Add
+                                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_form_horizontal" data-target="#modal_form_horizontal">Add
                                                     Project </button></a>
                                         </div>
 
+
+
                                     </div>
+
+
+                                    <?php
+                                    if (isset($_GET['msg'])) {
+
+                                    ?>
+
+                                        <div class="alert bg-success alert-styled-left">
+                                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                            <span class="text-semibold">Good Job</span>
+                                            <?php echo $_GET['msg'] ?>
+                                        </div>
+
+                                    <?php } ?>
+
+
 
                                     <table class="table datatable-basic table-bordered table-striped table-hover">
                                         <thead>
@@ -185,51 +195,49 @@
                                         </thead>
                                         <tbody>
 
-                                            <?php 
-                                            
+                                            <?php
+
                                             $selectQry = "SELECT * FROM  portfolio";
                                             $portfolio_list = mysqli_query($db_config, $selectQry);
-                                            
-                                            foreach($portfolio_list as $key => $portfolio){
-                                                
-                                            
+
+                                            foreach ($portfolio_list as $key => $portfolio) {
+
+
                                             ?>
 
-                                            <?php 
+                                                <?php
 
-                                               $status = $portfolio['status'];
-                                               
-                                               if($status == 1){
+                                                $status = $portfolio['status'];
+
+                                                if ($status == 1) {
                                                     $status = "Active";
-                                               }else{
+                                                } else {
                                                     $status = "Deactive";
-                                               }
-                                               
+                                                }
 
-                                            ?>
 
-                                            <tr>
-                                                <td><?php echo ++$key ?></td>
-                                                <td><?php echo $portfolio['project_name'] ?></td>
-                                                <td><?php echo $portfolio['project_bio'] ?></td>
-                                                <td><?php echo $portfolio['category'] ?></td>
-                                                <td><?php echo $portfolio['clint_name'] ?></td>
-                                                <td><?php echo $portfolio['project_language'] ?></td>
-                                                <td><?php echo $portfolio['project_preview_link'] ?></td>
-                                                <td><img src="" alt="not found">
-                                                    <?php echo $portfolio['image'] ?> </td>
-                                                <td><span class="label label-success"><?php echo $status ?></span>
-                                                </td>
-                                                <td class="text-center">
-                                                    <ul class="icons-list">
-                                                        <li><a href="#"><i class=" icon-pencil7" data-toggle="modal"
-                                                                    data-target="#modal_form_horizontal"
-                                                                    data-target="#modal_form_horizontal"></i></a>
-                                                        <li><a href="#"><i class="icon-trash"></i></a></li>
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
+                                                ?>
+
+                                                <tr>
+                                                    <td><?php echo ++$key ?></td>
+                                                    <td><?php echo $portfolio['project_name'] ?></td>
+                                                    <td><?php echo $portfolio['project_bio'] ?></td>
+                                                    <td><?php echo $portfolio['category'] ?></td>
+                                                    <td><?php echo $portfolio['clint_name'] ?></td>
+                                                    <td><?php echo $portfolio['project_language'] ?></td>
+                                                    <td><?php echo $portfolio['project_preview_link'] ?></td>
+                                                    <td><img src="" alt="not found">
+                                                        <?php echo $portfolio['image'] ?> </td>
+                                                    <td><span class="label label-success"><?php echo $status ?></span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <ul class="icons-list">
+                                                            <li><a href="update_portfolio.php"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="#"><i class="icon-trash"></i></a></li>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
 
                                             <?php } ?>
                                         </tbody>
