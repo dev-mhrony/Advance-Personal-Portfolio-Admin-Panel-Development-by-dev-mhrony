@@ -73,36 +73,54 @@
                                     <h5 class="modal-title">Update Exparience</h5>
                                 </div>
 
+
+                                <?php
+                                $exp_id = $_GET['exper_id'];
+                                $getSelectDataQre = "SELECT * FROM experience WHERE id={$exp_id}";
+                                $resultQre = mysqli_query($db_config, $getSelectDataQre);
+
+                                ?>
+
+
                                 <form action="./config/exparience_controlar.php" class="form-horizontal" method="POST">
                                     <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="companyName">Company Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your last company name" class="form-control" id="companyName" name="companyName">
-                                            </div>
-                                        </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="shortBio">Short Bio</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your project short discription " class="form-control" id="shortBio" name="shortBio">
-                                            </div>
-                                        </div>
+                                        <?php
+                                        foreach ($resultQre as $key => $singleExp) {
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="start_date">Start Job
-                                                Date</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type join year" class="form-control" id="start_date" name="startJob">
-                                            </div>
-                                        </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="end_date">End Job Date</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your end job year" class="form-control" id="end_date" name="endJob">
+                                        ?>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="companyName">Company Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your last company name" class="form-control" id="companyName" name="companyName" value="<?php echo $singleExp['company_name'] ?>">
+                                                </div>
                                             </div>
-                                        </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="shortBio">Short Bio</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your project short discription " class="form-control" id="shortBio" name="shortBio" value="<?php echo $singleExp['short_bio'] ?>">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="start_date">Start Job
+                                                    Date</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type join year" class="form-control" id="start_date" name="startJob" value="<?php echo $singleExp['start_jobe_date'] ?>">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="end_date">End Job Date</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your end job year" class="form-control" id="end_date" name="endJob" value="<?php echo $singleExp['end_jobe_date'] ?>">
+                                                </div>
+                                            </div>
+
+                                        <?php } ?>
                                     </div>
 
                                     <div class="modal-footer">
