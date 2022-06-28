@@ -87,7 +87,7 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-3" for="Image">Image</label>
                                             <div class="col-sm-9">
-                                                <input type="number" placeholder="Type your end year" class="form-control" id="Image" name="Image">
+                                                <input type="file" placeholder="Type your end year" class="form-control" id="Image" name="Image">
                                             </div>
                                         </div>
                                     </div>
