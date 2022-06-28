@@ -61,26 +61,44 @@
                                     <h5 class="modal-title">Update Home Section</h5>
                                 </div>
 
+
+                                <?php
+
+                                $home_id = $_GET['home_id'];
+                                $getSingleDataQry = "SELECT * FROM home_edit_section WHERE id={$home_id}";
+                                $gerResult = mysqli_query($db_config, $getSingleDataQry);
+
+
+                                ?>
+
                                 <form class="form-horizontal" action="config/home_controlar.php" method="POST">
                                     <div class="modal-body">
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3" for="YourName">Your Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Your Name" class="form-control" id="YourName" name="YourName">
-                                            </div>
+
+                                            <?php
+
+                                            foreach ($gerResult as $key => $singleHome_data) {
+
+
+                                            ?>
+
+                                                <label class="control-label col-sm-3" for="YourName">Your Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your Your Name" class="form-control" id="YourName" name="YourName" value="<?php echo $singleHome_data['your_name'] ?>">
+                                                </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-3" for="Description">Description</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your project discription " class="form-control" id="Description" name="Description">
+                                                <input type="text" placeholder="Type your project discription " class="form-control" id="Description" name="Description" value="<?php echo $singleHome_data['description'] ?>">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-3" for="Link">Link</label>
                                             <div class="col-sm-9">
-                                                <input type="number" placeholder="Type Link" class="form-control" id="Link" name="Link">
+                                                <input type="text" placeholder="Type Link" class="form-control" id="Link" name="Link" value="<?php echo $singleHome_data['link'] ?>">
                                             </div>
                                         </div>
 
@@ -92,11 +110,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="modal-footer">
-                                        <a href="home_section.php"><button type="button" class="btn btn-link" data-dismiss="modal">Back to Home
-                                            </button></a>
-                                        <button type="submit" class="btn btn-primary" name="updateHome">Update Home Section</button>
-                                    </div>
+                                <?php } ?>
+
+                                <div class="modal-footer">
+                                    <a href="home_section.php"><button type="button" class="btn btn-link" data-dismiss="modal">Back to Home
+                                        </button></a>
+                                    <button type="submit" class="btn btn-primary" name="updateHome">Update Home Section</button>
+                                </div>
                                 </form>
                             </div>
                         </div>

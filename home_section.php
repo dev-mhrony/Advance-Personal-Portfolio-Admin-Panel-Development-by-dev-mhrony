@@ -121,7 +121,7 @@
                                                     </td>
                                                     <td class="text-center">
                                                         <ul class="icons-list">
-                                                            <li><a href="update_home_section.php"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="update_home_section.php?home_id=<?php echo $home['id'] ?>"><i class=" icon-pencil7"></i></a>
                                                             </li>
                                                         </ul>
                                                     </td>
