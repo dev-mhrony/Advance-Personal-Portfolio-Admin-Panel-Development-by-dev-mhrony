@@ -106,7 +106,7 @@
                                                     <td><?php echo $about_work['cv'] ?></td>
                                                     <td class="text-center">
                                                         <ul class="icons-list">
-                                                            <li><a href="update_workinfo.php"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="update_workinfo.php?work_id=<?php echo $about_work['id'] ?>"><i class=" icon-pencil7"></i></a>
                                                             </li>
                                                         </ul>
                                                     </td>

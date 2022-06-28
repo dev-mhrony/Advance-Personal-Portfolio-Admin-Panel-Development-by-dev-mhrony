@@ -6,6 +6,7 @@
 
     <?php
     include "header_link_file.php";
+    include "./config/server_connect.php";
     ?>
 
 </head>
@@ -49,6 +50,14 @@
                 <!-- ===Content area ==-->
                 <div class="content">
 
+                    <?php
+                    $work_id = $_GET['work_id'];
+                    $getSingleDataQry = "SELECT * FROM about_work WHERE id=$work_id";
+                    $result = mysqli_query($db_config, $getSingleDataQry);
+
+
+
+                    ?>
 
                     <!-- Horizontal form modal -->
                     <div class="modal-content">
@@ -59,46 +68,56 @@
 
                         <form action="#" class="form-horizontal">
                             <div class="modal-body">
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="Experience">Experience (Year)</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" placeholder="Type your fast name" id="Experience" class="form-control">
-                                    </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="HappyCustomar">Happy Customar</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" placeholder="Type your project lirst name" id="HappyCustomar" class="form-control">
-                                    </div>
-                                </div>
+                                <?php
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="CompletProject">Complet Project</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" placeholder="Type your date of birth year" id="CompletProject" class="form-control">
-                                    </div>
-                                </div>
+                                foreach ($result as $key => $singleData) {
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="Awards">Awards</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" placeholder="Type your nationality" class="form-control" id="Awards">
-                                    </div>
-                                </div>
+                                ?>
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="CV">CV</label>
-                                    <div class="col-sm-9">
-                                        <input type="file" placeholder="Are your Freelance?" class="form-control" id="CV">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="Experience">Experience (Year)</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" placeholder="Type your fast name" id="Experience" class="form-control" value="<?php echo $singleData['experience_by_year'] ?>">
+                                        </div>
                                     </div>
-                                </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="HappyCustomar">Happy Customar</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" placeholder="Type your project lirst name" id="HappyCustomar" class="form-control" value="<?php echo $singleData['happy_customar'] ?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="CompletProject">Complet Project</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" placeholder="Type your date of birth year" id="CompletProject" class="form-control" value="<?php echo $singleData['complet_project'] ?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="Awards">Awards</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" placeholder="Type your nationality" class="form-control" id="Awards" value="<?php echo $singleData['awards'] ?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="CV">CV</label>
+                                        <div class="col-sm-9">
+                                            <input type="file" placeholder="Are your Freelance?" class="form-control" id="CV">
+                                        </div>
+                                    </div>
+
+                                <?php } ?>
                             </div>
 
                             <div class="modal-footer">
                                 <a href="work_info.php"><button type="button" class="btn btn-link" data-dismiss="modal">Close</button></a>
                                 <button type="submit" class="btn btn-primary">Update Work</button>
                             </div>
+
                         </form>
                     </div>
                 </div>
