@@ -5,9 +5,9 @@
 <head>
 
     <?php
-	include "header_link_file.php";
+    include "header_link_file.php";
     include "./config/server_connect.php";
-	?>
+    ?>
 
 </head>
 
@@ -17,8 +17,8 @@
 
 
     <?php
-	include "./include_section/top_navbar.php";
-	?>
+    include "./include_section/top_navbar.php";
+    ?>
 
     <!-- /main navbar -->
 
@@ -30,8 +30,8 @@
 
             <!-- Main sidebar -->
             <?php
-			include "./include_section/main_sidebar.php";
-			?>
+            include "./include_section/main_sidebar.php";
+            ?>
             <!-- /main sidebar -->
 
 
@@ -61,28 +61,26 @@
                                     <h5 class="modal-title">Skill Update</h5>
                                 </div>
 
-                                <form action="#" class="form-horizontal">
+                                <form action="./config/skill_controlar.php" class="form-horizontal" method="POST">
                                     <div class="modal-body">
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3">Skill Name</label>
+                                            <label class="control-label col-sm-3" for="Percentage">Skill Name</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your skill name"
-                                                    class="form-control">
+                                                <input type="text" placeholder="Type your skill name" class="form-control" id="Skill" name="SkillName">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3">Percentage</label>
+                                            <label class="control-label col-sm-3" for="Percentage">Percentage</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your percentage (%) "
-                                                    class="form-control">
+                                                <input type="text" placeholder="Type your percentage (%) " class="form-control" id="Percentage" name="Percentage">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3">Exparience</label>
+                                            <label class="control-label col-sm-3" for="Experience">Exparience</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type exparience" class="form-control">
+                                                <input type="text" placeholder="Type exparience" class="form-control" id="Experience" name="Experience">
                                             </div>
                                         </div>
 
@@ -90,8 +88,7 @@
 
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Submit
-                                            form</button>
+                                        <button type="submit" class="btn btn-primary" name="skillSubmit">Add Skill</button>
                                     </div>
                                 </form>
                             </div>
@@ -123,11 +120,25 @@
                                         through <code> Add Education Degree </code> here.
 
                                         <div class="text-right">
-                                            <a href="add_skill.php"><button type="button" class="btn btn-primary">Add
-                                                    Skill </button></a>
+                                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_form_horizontal" data-target="#modal_form_horizontal">Add Skill</button></a>
                                         </div>
 
                                     </div>
+
+
+                                    <?php
+                                    if (isset($_GET['msg'])) {
+
+                                    ?>
+
+                                        <div class="alert bg-success alert-styled-left">
+                                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                            <span class="text-semibold">Good Job</span>
+                                            <?php echo $_GET['msg'] ?>
+                                        </div>
+
+                                    <?php } ?>
+
 
 
 
@@ -143,39 +154,37 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php 
+                                            <?php
                                             $selectQry = "SELECT * FROM skill";
                                             $skill_list = mysqli_query($db_config, $selectQry);
-                                            foreach($skill_list as $key => $skill){
-                                                
-                                            
+                                            foreach ($skill_list as $key => $skill) {
+
+
                                             ?>
 
-                                            <?php 
-                                            $status = $skill['status'];
-                                            if($status == 1){
-                                                $status = "Active";
-                                            }else{
-                                                $status = "Deactive";
-                                            }
-                                            ?>
-                                            <tr>
-                                                <td><?php echo ++$key ?></td>
-                                                <td><?php echo $skill['skill_name'] ?></td>
-                                                <td><?php echo $skill['percentage'] ?></td>
-                                                <td><?php echo $skill['experience'] . " Year" ?></td>
-                                                <td><span class="label label-success"><?php echo $status ?></span>
-                                                </td>
-                                                <td class="text-center">
-                                                    <ul class="icons-list">
-                                                        <li><a href="#"><i class=" icon-pencil7" data-toggle="modal"
-                                                                    data-target="#modal_form_horizontal"
-                                                                    data-target="#modal_form_horizontal"></i></a>
-                                                        <li><a href="#"><i class="icon-trash"></i></a></li>
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
+                                                <?php
+                                                $status = $skill['status'];
+                                                if ($status == 1) {
+                                                    $status = "Active";
+                                                } else {
+                                                    $status = "Deactive";
+                                                }
+                                                ?>
+                                                <tr>
+                                                    <td><?php echo ++$key ?></td>
+                                                    <td><?php echo $skill['skill_name'] ?></td>
+                                                    <td><?php echo $skill['percentage'] ?></td>
+                                                    <td><?php echo $skill['experience'] . " Year" ?></td>
+                                                    <td><span class="label label-success"><?php echo $status ?></span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <ul class="icons-list">
+                                                            <li><a href="update_skill.php"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="#"><i class="icon-trash"></i></a></li>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
 
                                             <?php } ?>
                                         </tbody>

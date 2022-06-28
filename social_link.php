@@ -5,9 +5,9 @@
 <head>
 
     <?php
-	include "header_link_file.php";
+    include "header_link_file.php";
     include "./config/server_connect.php";
-	?>
+    ?>
 
 </head>
 
@@ -17,8 +17,8 @@
 
 
     <?php
-	include "./include_section/top_navbar.php";
-	?>
+    include "./include_section/top_navbar.php";
+    ?>
 
     <!-- /main navbar -->
 
@@ -30,8 +30,8 @@
 
             <!-- Main sidebar -->
             <?php
-			include "./include_section/main_sidebar.php";
-			?>
+            include "./include_section/main_sidebar.php";
+            ?>
             <!-- /main sidebar -->
 
 
@@ -66,16 +66,14 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-3">Social Media</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type social media name"
-                                                    class="form-control">
+                                                <input type="text" placeholder="Type social media name" class="form-control">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-3">Social Media Link</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your social media Link "
-                                                    class="form-control">
+                                                <input type="text" placeholder="Type your social media Link " class="form-control">
                                             </div>
                                         </div>
                                     </div>
@@ -114,12 +112,25 @@
                                         through <code> Add Education Degree </code> here.
 
                                         <div class="text-right">
-                                            <a href="add_socialmedia.php"><button type="button"
-                                                    class="btn btn-primary">Add
-                                                    Social Media Link </button></a>
+                                            <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_form_horizontal" data-target="#modal_form_horizontal">Add
+                                                    Social Media </button></a>
                                         </div>
 
                                     </div>
+
+                                    <?php
+                                    if (isset($_GET['msg'])) {
+
+                                    ?>
+
+                                        <div class="alert bg-success alert-styled-left">
+                                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                            <span class="text-semibold">Good Job</span>
+                                            <?php echo $_GET['msg'] ?>
+                                        </div>
+
+                                    <?php } ?>
+
 
 
 
@@ -135,39 +146,37 @@
                                         </thead>
                                         <tbody>
 
-                                            <?php 
+                                            <?php
                                             $selectQry = "SELECT * FROM social_media";
                                             $social_media_list = mysqli_query($db_config, $selectQry);
-                                            foreach($social_media_list as $key => $social_media){
-                                                
-                                            
+                                            foreach ($social_media_list as $key => $social_media) {
+
+
                                             ?>
 
-                                            <?php 
-                                            $status = $social_media['status'];
-                                            if($status == 1){
-                                                $status = "Active";
-                                            }else{
-                                                $status = "Deactive";
-                                            }
-                                            ?>
+                                                <?php
+                                                $status = $social_media['status'];
+                                                if ($status == 1) {
+                                                    $status = "Active";
+                                                } else {
+                                                    $status = "Deactive";
+                                                }
+                                                ?>
 
 
-                                            <tr>
-                                                <td><?php echo ++$key?></td>
-                                                <td><?php echo $social_media['social_media_name'] ?></td>
-                                                <td><?php echo $social_media['social_media_link'] ?></td>
-                                                <td><span class="label label-success"><?php echo $status ?> </span></td>
-                                                <td class="text-center">
-                                                    <ul class="icons-list">
-                                                        <li><a href="#"><i class=" icon-pencil7" data-toggle="modal"
-                                                                    data-target="#modal_form_horizontal"
-                                                                    data-target="#modal_form_horizontal"></i></a>
-                                                        <li><a href="#"><i class="icon-trash"></i></a></li>
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td><?php echo ++$key ?></td>
+                                                    <td><?php echo $social_media['social_media_name'] ?></td>
+                                                    <td><?php echo $social_media['social_media_link'] ?></td>
+                                                    <td><span class="label label-success"><?php echo $status ?> </span></td>
+                                                    <td class="text-center">
+                                                        <ul class="icons-list">
+                                                            <li><a href="#"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="#"><i class="icon-trash"></i></a></li>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
 
                                             <?php } ?>
                                         </tbody>

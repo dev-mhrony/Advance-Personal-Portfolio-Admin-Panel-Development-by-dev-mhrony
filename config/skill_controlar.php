@@ -22,8 +22,5 @@ if(isset($_POST["skillSubmit"])){
             
         }
     }
-    header("location: ../add_skill.php?msg={$message}");
+    header("location: ../skill.php?msg={$message}");
 }
-
-
-?>
