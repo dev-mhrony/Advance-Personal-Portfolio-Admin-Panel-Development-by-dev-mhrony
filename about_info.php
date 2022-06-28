@@ -5,9 +5,9 @@
 <head>
 
     <?php
-	include "header_link_file.php";
+    include "header_link_file.php";
     include "./config/server_connect.php";
-	?>
+    ?>
 
 </head>
 
@@ -16,8 +16,8 @@
     <!-- Main navbar== -->
 
     <?php
-	include "./include_section/top_navbar.php";
-	?>
+    include "./include_section/top_navbar.php";
+    ?>
 
     <!-- /main navbar -->
 
@@ -29,8 +29,8 @@
 
             <!-- Main sidebar -->
             <?php
-			include "./include_section/main_sidebar.php";
-			?>
+            include "./include_section/main_sidebar.php";
+            ?>
             <!-- /main sidebar -->
 
 
@@ -50,98 +50,6 @@
                 <div class="content">
 
 
-                    <!-- ================================ Pop UP Windo================ -->
-                    <div id="modal_form_horizontal" class="modal fade">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h5 class="modal-title">Update About</h5>
-                                </div>
-
-                                <form action="#" class="form-horizontal">
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">First Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your fast name"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Lirst Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your project lirst name "
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Date Of Birth Year</label>
-                                            <div class="col-sm-9">
-                                                <input type="number" placeholder="Type your date of birth year"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Nationality</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your nationality"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Freelance</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Are your Freelance?"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Address</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Location" class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Phone Number</label>
-                                            <div class="col-sm-9">
-                                                <input type="number" placeholder="" class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">E-mail</label>
-                                            <div class="col-sm-9">
-                                                <input type="email" placeholder="Type your Contact E-mail"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Langages</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Speek Langages"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Update Info</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ================================ Pop UP Windo Close================ -->
 
 
                     <!-- Left fixed column -->
@@ -182,32 +90,30 @@
                             </thead>
                             <tbody>
                                 <?php
-                                
+
                                 $selectQry = "SELECT * FROM about_info";
                                 $about_info_list = mysqli_query($db_config, $selectQry);
-                                foreach($about_info_list as $key => $about_info){
-                                
+                                foreach ($about_info_list as $key => $about_info) {
+
                                 ?>
-                                <tr>
-                                    <th><?php echo ++$key ?></th>
-                                    <td><?php echo $about_info['fast_name'] ?></td>
-                                    <td><?php echo $about_info['last_name'] ?></td>
-                                    <td><?php echo $about_info['age'] ?></td>
-                                    <td><?php echo $about_info['nationality'] ?></td>
-                                    <td><?php echo $about_info['freelance'] ?></td>
-                                    <td><?php echo $about_info['address'] ?></td>
-                                    <td><?php echo $about_info['phone_number'] ?></td>
-                                    <td><?php echo $about_info['email'] ?></td>
-                                    <td><?php echo $about_info['language'] ?></td>
-                                    <td class="text-center">
-                                        <ul class="icons-list">
-                                            <li><a href="#"><i class=" icon-pencil7" data-toggle="modal"
-                                                        data-target="#modal_form_horizontal"
-                                                        data-target="#modal_form_horizontal"></i></a>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
+                                    <tr>
+                                        <th><?php echo ++$key ?></th>
+                                        <td><?php echo $about_info['fast_name'] ?></td>
+                                        <td><?php echo $about_info['last_name'] ?></td>
+                                        <td><?php echo $about_info['age'] ?></td>
+                                        <td><?php echo $about_info['nationality'] ?></td>
+                                        <td><?php echo $about_info['freelance'] ?></td>
+                                        <td><?php echo $about_info['address'] ?></td>
+                                        <td><?php echo $about_info['phone_number'] ?></td>
+                                        <td><?php echo $about_info['email'] ?></td>
+                                        <td><?php echo $about_info['language'] ?></td>
+                                        <td class="text-center">
+                                            <ul class="icons-list">
+                                                <li><a href="update_aboutinfo.php"><i class=" icon-pencil7"></i></a>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
 
                                 <?php } ?>
 

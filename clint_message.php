@@ -5,8 +5,8 @@
 <head>
 
     <?php
-	include "header_link_file.php";
-	?>
+    include "header_link_file.php";
+    ?>
 
 </head>
 
@@ -16,8 +16,8 @@
 
 
     <?php
-	include "./include_section/top_navbar.php";
-	?>
+    include "./include_section/top_navbar.php";
+    ?>
 
     <!-- /main navbar -->
 
@@ -29,8 +29,8 @@
 
             <!-- Main sidebar -->
             <?php
-			include "./include_section/main_sidebar.php";
-			?>
+            include "./include_section/main_sidebar.php";
+            ?>
             <!-- /main sidebar -->
 
 
@@ -67,8 +67,7 @@
                                         <ul class="media-list media-list-linked">
                                             <li class="media">
                                                 <a href="#jared" data-toggle="tab" class="media-link">
-                                                    <div class="media-left"><img src="assets/images/placeholder.jpg"
-                                                            class="img-circle" alt=""></div>
+                                                    <div class="media-left"><img src="./assets/images/clint_photo/01.jpg" class="img-circle" alt=""></div>
                                                     <div class="media-body">
                                                         <span class="media-heading text-semibold">James Alexander</span>
                                                         <span class="text-size-small text-muted display-block">UI/UX
@@ -82,8 +81,7 @@
 
                                             <li class="media">
                                                 <a href="#jared" data-toggle="tab" class="media-link">
-                                                    <div class="media-left"><img src="assets/images/placeholder.jpg"
-                                                            class="img-circle" alt=""></div>
+                                                    <div class="media-left"><img src="./assets/images/clint_photo/02.jpg" class="img-circle" alt=""></div>
                                                     <div class="media-body">
                                                         <span class="media-heading text-semibold">Jeremy
                                                             Victorino</span>
@@ -98,8 +96,7 @@
 
                                             <li class="media">
                                                 <a href="#jared" data-toggle="tab" class="media-link">
-                                                    <div class="media-left"><img src="assets/images/placeholder.jpg"
-                                                            class="img-circle" alt=""></div>
+                                                    <div class="media-left"><img src="./assets/images/clint_photo/03.jpg" class="img-circle" alt=""></div>
                                                     <div class="media-body">
                                                         <div class="media-heading"><span class="text-semibold">Jordana
                                                                 Mills</span></div>
@@ -125,8 +122,8 @@
                                     <ul class="media-list chat-list content-group">
                                         <li class="media">
                                             <div class="media-left">
-                                                <a href="assets/images/placeholder.jpg">
-                                                    <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                                <a href="./assets/images/clint_photo/01.jpg">
+                                                    <img src="./assets/images/clint_photo/01.jpg" class="img-circle" alt="">
                                                 </a>
                                             </div>
 
@@ -134,9 +131,7 @@
                                                 <div class="media-content">Crud reran and while much withdrew ardent
                                                     much crab hugely met dizzily that more jeez gent equivalent unsafely
                                                     far one hesitant so therefore.</div>
-                                                <span class="media-annotation display-block mt-10">Tue, 10:28 am <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Tue, 10:28 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -146,9 +141,7 @@
                                                     As this oh darn but slapped casually husky sheared that cardinal
                                                     hugely one and some unnecessary factiously hedgehog a feeling one
                                                     rudely much</div>
-                                                <span class="media-annotation display-block mt-10">Mon, 10:24 am <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Mon, 10:24 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
 
                                             <div class="media-right">
@@ -160,8 +153,8 @@
 
                                         <li class="media">
                                             <div class="media-left">
-                                                <a href="assets/images/placeholder.jpg">
-                                                    <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                                <a href="./assets/images/clint_photo/01.jpg">
+                                                    <img src="./assets/images/clint_photo/01.jpg" class="img-circle" alt="">
                                                 </a>
                                             </div>
 
@@ -169,9 +162,7 @@
                                                 <div class="media-content">Tolerantly some understood this stubbornly
                                                     after snarlingly frog far added insect into snorted more
                                                     auspiciously heedless drunkenly jeez foolhardy oh.</div>
-                                                <span class="media-annotation display-block mt-10">Wed, 4:20 pm <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Wed, 4:20 pm <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -184,9 +175,7 @@
                                                 <div class="media-content">Satisfactorily strenuously while sleazily
                                                     dear frustratingly insect menially some shook far sardonic badger
                                                     telepathic much jeepers immature much hey.</div>
-                                                <span class="media-annotation display-block mt-10">2 hours ago <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">2 hours ago <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
 
                                             <div class="media-right">
@@ -198,8 +187,8 @@
 
                                         <li class="media">
                                             <div class="media-left">
-                                                <a href="assets/images/placeholder.jpg">
-                                                    <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                                <a href="./assets/images/clint_photo/01.jpg">
+                                                    <img src="./assets/images/clint_photo/01.jpg" class="img-circle" alt="">
                                                 </a>
                                             </div>
 
@@ -207,9 +196,7 @@
                                                 <div class="media-content">Grunted smirked and grew less but rewound
                                                     much despite and impressive via alongside out and gosh easy manatee
                                                     dear ineffective yikes.</div>
-                                                <span class="media-annotation display-block mt-10">13 minutes ago <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">13 minutes ago <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -226,26 +213,20 @@
                                         </li>
                                     </ul>
 
-                                    <textarea name="enter-message" class="form-control content-group" rows="3" cols="1"
-                                        placeholder="Enter your message..."></textarea>
+                                    <textarea name="enter-message" class="form-control content-group" rows="3" cols="1" placeholder="Enter your message..."></textarea>
 
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <ul class="icons-list icons-list-extended mt-10">
-                                                <li><a href="#" data-popup="tooltip" title="Send photo"
-                                                        data-container="body"><i class="icon-file-picture" ile"></i></a>
+                                                <li><a href="#" data-popup="tooltip" title="Send photo" data-container="body"><i class="icon-file-picture" ile"></i></a>
                                                 </li>
-                                                <li><a href="#" data-popup="tooltip" title="Send video"
-                                                        data-container="body"><i class="icon-file-video"></i></a></li>
-                                                <li><a href="#" data-popup="tooltip" title="Send file"
-                                                        data-container="body"><i class="icon-file-plus"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send video" data-container="body"><i class="icon-file-video"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send file" data-container="body"><i class="icon-file-plus"></i></a></li>
                                             </ul>
                                         </div>
 
                                         <div class="col-xs-6 text-right">
-                                            <button type="button"
-                                                class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i
-                                                        class="icon-circle-right2"></i></b> Send</button>
+                                            <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-circle-right2"></i></b> Send</button>
                                         </div>
                                     </div>
                                 </div>
@@ -254,8 +235,8 @@
                                     <ul class="media-list chat-list content-group">
                                         <li class="media">
                                             <div class="media-left">
-                                                <a href="assets/images/placeholder.jpg">
-                                                    <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                                <a href="./assets/images/clint_photo/01.jpg">
+                                                    <img src="./assets/images/clint_photo/01.jpg" class="img-circle" alt="">
                                                 </a>
                                             </div>
 
@@ -263,9 +244,7 @@
                                                 <div class="media-content">Crud reran and while much withdrew ardent
                                                     much crab hugely met dizzily that more jeez gent equivalent unsafely
                                                     far one hesitant so therefore.</div>
-                                                <span class="media-annotation display-block mt-10">Tue, 10:28 am <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Tue, 10:28 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -275,9 +254,7 @@
                                                     As this oh darn but slapped casually husky sheared that cardinal
                                                     hugely one and some unnecessary factiously hedgehog a feeling one
                                                     rudely much</div>
-                                                <span class="media-annotation display-block mt-10">Mon, 10:24 am <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Mon, 10:24 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
 
                                             <div class="media-right">
@@ -298,9 +275,7 @@
                                                 <div class="media-content">Tolerantly some understood this stubbornly
                                                     after snarlingly frog far added insect into snorted more
                                                     auspiciously heedless drunkenly jeez foolhardy oh.</div>
-                                                <span class="media-annotation display-block mt-10">Wed, 4:20 pm <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Wed, 4:20 pm <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -313,9 +288,7 @@
                                                 <div class="media-content">Satisfactorily strenuously while sleazily
                                                     dear frustratingly insect menially some shook far sardonic badger
                                                     telepathic much jeepers immature much hey.</div>
-                                                <span class="media-annotation display-block mt-10">2 hours ago <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">2 hours ago <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
 
                                             <div class="media-right">
@@ -336,9 +309,7 @@
                                                 <div class="media-content">Grunted smirked and grew less but rewound
                                                     much despite and impressive via alongside out and gosh easy manatee
                                                     dear ineffective yikes.</div>
-                                                <span class="media-annotation display-block mt-10">13 minutes ago <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">13 minutes ago <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -355,25 +326,19 @@
                                         </li>
                                     </ul>
 
-                                    <textarea name="enter-message" class="form-control content-group" rows="3" cols="1"
-                                        placeholder="Enter your message..."></textarea>
+                                    <textarea name="enter-message" class="form-control content-group" rows="3" cols="1" placeholder="Enter your message..."></textarea>
 
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <ul class="icons-list icons-list-extended mt-10">
-                                                <li><a href="#" data-popup="tooltip" title="Send photo"
-                                                        data-container="body"><i class="icon-file-picture"></i></a></li>
-                                                <li><a href="#" data-popup="tooltip" title="Send video"
-                                                        data-container="body"><i class="icon-file-video"></i></a></li>
-                                                <li><a href="#" data-popup="tooltip" title="Send file"
-                                                        data-container="body"><i class="icon-file-plus"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send photo" data-container="body"><i class="icon-file-picture"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send video" data-container="body"><i class="icon-file-video"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send file" data-container="body"><i class="icon-file-plus"></i></a></li>
                                             </ul>
                                         </div>
 
                                         <div class="col-xs-6 text-right">
-                                            <button type="button"
-                                                class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i
-                                                        class="icon-circle-right2"></i></b> Send</button>
+                                            <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-circle-right2"></i></b> Send</button>
                                         </div>
                                     </div>
                                 </div>
@@ -391,9 +356,7 @@
                                                 <div class="media-content">Crud reran and while much withdrew ardent
                                                     much crab hugely met dizzily that more jeez gent equivalent unsafely
                                                     far one hesitant so therefore.</div>
-                                                <span class="media-annotation display-block mt-10">Tue, 10:28 am <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Tue, 10:28 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -403,9 +366,7 @@
                                                     As this oh darn but slapped casually husky sheared that cardinal
                                                     hugely one and some unnecessary factiously hedgehog a feeling one
                                                     rudely much</div>
-                                                <span class="media-annotation display-block mt-10">Mon, 10:24 am <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Mon, 10:24 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
 
                                             <div class="media-right">
@@ -426,9 +387,7 @@
                                                 <div class="media-content">Tolerantly some understood this stubbornly
                                                     after snarlingly frog far added insect into snorted more
                                                     auspiciously heedless drunkenly jeez foolhardy oh.</div>
-                                                <span class="media-annotation display-block mt-10">Wed, 4:20 pm <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Wed, 4:20 pm <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -441,9 +400,7 @@
                                                 <div class="media-content">Satisfactorily strenuously while sleazily
                                                     dear frustratingly insect menially some shook far sardonic badger
                                                     telepathic much jeepers immature much hey.</div>
-                                                <span class="media-annotation display-block mt-10">2 hours ago <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">2 hours ago <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
 
                                             <div class="media-right">
@@ -464,9 +421,7 @@
                                                 <div class="media-content">Grunted smirked and grew less but rewound
                                                     much despite and impressive via alongside out and gosh easy manatee
                                                     dear ineffective yikes.</div>
-                                                <span class="media-annotation display-block mt-10">13 minutes ago <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">13 minutes ago <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -483,25 +438,19 @@
                                         </li>
                                     </ul>
 
-                                    <textarea name="enter-message" class="form-control content-group" rows="3" cols="1"
-                                        placeholder="Enter your message..."></textarea>
+                                    <textarea name="enter-message" class="form-control content-group" rows="3" cols="1" placeholder="Enter your message..."></textarea>
 
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <ul class="icons-list icons-list-extended mt-10">
-                                                <li><a href="#" data-popup="tooltip" title="Send photo"
-                                                        data-container="body"><i class="icon-file-picture"></i></a></li>
-                                                <li><a href="#" data-popup="tooltip" title="Send video"
-                                                        data-container="body"><i class="icon-file-video"></i></a></li>
-                                                <li><a href="#" data-popup="tooltip" title="Send file"
-                                                        data-container="body"><i class="icon-file-plus"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send photo" data-container="body"><i class="icon-file-picture"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send video" data-container="body"><i class="icon-file-video"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send file" data-container="body"><i class="icon-file-plus"></i></a></li>
                                             </ul>
                                         </div>
 
                                         <div class="col-xs-6 text-right">
-                                            <button type="button"
-                                                class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i
-                                                        class="icon-circle-right2"></i></b> Send</button>
+                                            <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-circle-right2"></i></b> Send</button>
                                         </div>
                                     </div>
                                 </div>
@@ -519,9 +468,7 @@
                                                 <div class="media-content">Crud reran and while much withdrew ardent
                                                     much crab hugely met dizzily that more jeez gent equivalent unsafely
                                                     far one hesitant so therefore.</div>
-                                                <span class="media-annotation display-block mt-10">Tue, 10:28 am <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Tue, 10:28 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -531,9 +478,7 @@
                                                     As this oh darn but slapped casually husky sheared that cardinal
                                                     hugely one and some unnecessary factiously hedgehog a feeling one
                                                     rudely much</div>
-                                                <span class="media-annotation display-block mt-10">Mon, 10:24 am <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Mon, 10:24 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
 
                                             <div class="media-right">
@@ -554,9 +499,7 @@
                                                 <div class="media-content">Tolerantly some understood this stubbornly
                                                     after snarlingly frog far added insect into snorted more
                                                     auspiciously heedless drunkenly jeez foolhardy oh.</div>
-                                                <span class="media-annotation display-block mt-10">Wed, 4:20 pm <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">Wed, 4:20 pm <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -569,9 +512,7 @@
                                                 <div class="media-content">Satisfactorily strenuously while sleazily
                                                     dear frustratingly insect menially some shook far sardonic badger
                                                     telepathic much jeepers immature much hey.</div>
-                                                <span class="media-annotation display-block mt-10">2 hours ago <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">2 hours ago <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
 
                                             <div class="media-right">
@@ -592,9 +533,7 @@
                                                 <div class="media-content">Grunted smirked and grew less but rewound
                                                     much despite and impressive via alongside out and gosh easy manatee
                                                     dear ineffective yikes.</div>
-                                                <span class="media-annotation display-block mt-10">13 minutes ago <a
-                                                        href="#"><i
-                                                            class="icon-pin-alt position-right text-muted"></i></a></span>
+                                                <span class="media-annotation display-block mt-10">13 minutes ago <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
                                             </div>
                                         </li>
 
@@ -611,25 +550,19 @@
                                         </li>
                                     </ul>
 
-                                    <textarea name="enter-message" class="form-control content-group" rows="3" cols="1"
-                                        placeholder="Enter your message..."></textarea>
+                                    <textarea name="enter-message" class="form-control content-group" rows="3" cols="1" placeholder="Enter your message..."></textarea>
 
                                     <div class="row">
                                         <div class="col-xs-6">
                                             <ul class="icons-list icons-list-extended mt-10">
-                                                <li><a href="#" data-popup="tooltip" title="Send photo"
-                                                        data-container="body"><i class="icon-file-picture"></i></a></li>
-                                                <li><a href="#" data-popup="tooltip" title="Send video"
-                                                        data-container="body"><i class="icon-file-video"></i></a></li>
-                                                <li><a href="#" data-popup="tooltip" title="Send file"
-                                                        data-container="body"><i class="icon-file-plus"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send photo" data-container="body"><i class="icon-file-picture"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send video" data-container="body"><i class="icon-file-video"></i></a></li>
+                                                <li><a href="#" data-popup="tooltip" title="Send file" data-container="body"><i class="icon-file-plus"></i></a></li>
                                             </ul>
                                         </div>
 
                                         <div class="col-xs-6 text-right">
-                                            <button type="button"
-                                                class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i
-                                                        class="icon-circle-right2"></i></b> Send</button>
+                                            <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-circle-right2"></i></b> Send</button>
                                         </div>
                                     </div>
                                 </div>

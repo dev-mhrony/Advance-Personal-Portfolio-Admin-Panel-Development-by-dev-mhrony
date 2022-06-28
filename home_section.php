@@ -59,8 +59,6 @@
                             <!-- Quick stats boxes -->
                             <div class="row">
 
-
-
                                 <div class="panel panel-flat">
                                     <div class="panel-heading">
                                         <h5 class="panel-title">Welcome to Home Edit Section</h5>
