@@ -6,6 +6,7 @@
 
     <?php
     include "header_link_file.php";
+    require "./config/server_connect.php";
     ?>
 
 </head>
@@ -57,36 +58,54 @@
                             <h5 class="modal-title">Update Your Contact Page</h5>
                         </div>
 
+                        <?php
+                        $cont_id = $_GET['cont_id'];
+                        $getSelectQry = "SELECT * FROM contact WHERE id={$cont_id}";
+                        $getResult = mysqli_query($db_config, $getSelectQry);
+
+                        ?>
+
                         <form action="#" class="form-horizontal">
                             <div class="modal-body">
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="Title">Title</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" placeholder="Type Title" class="form-control" id="Title">
-                                    </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="ShortBio">Short Bio</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" placeholder="Type your site short discription" id="ShortBio" class="form-control">
-                                    </div>
-                                </div>
+                                <?php
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="Email">E-mail</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" placeholder="Type your email" class="form-control" id="Email">
-                                    </div>
-                                </div>
+                                foreach ($getResult as $key => $singleData) {
 
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="PhoneNumber">Phone Number</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" placeholder="Type your phone number" class="form-control" id="PhoneNumber">
+
+                                ?>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="Title">Title</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" placeholder="Type Title" class="form-control" id="Title" value="<?php echo $singleData['title'] ?>">
+                                        </div>
                                     </div>
-                                </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="ShortBio">Short Bio</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" placeholder="Type your site short discription" id="ShortBio" class="form-control" value="<?php echo $singleData['short_bio'] ?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="Email">E-mail</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" placeholder="Type your email" class="form-control" id="Email" value="<?php echo $singleData['email'] ?>">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="PhoneNumber">Phone Number</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" placeholder="Type your phone number" class="form-control" id="PhoneNumber" value="<?php echo $singleData['phone_number'] ?>">
+                                        </div>
+                                    </div>
+
+                                <?php } ?>
                             </div>
 
                             <div class="modal-footer">

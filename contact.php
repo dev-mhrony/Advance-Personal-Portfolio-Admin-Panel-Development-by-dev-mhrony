@@ -91,15 +91,15 @@
 
 
                                             <?php
-                                            $selectQry = "SELECT * FROM experience";
-                                            $experience_list = mysqli_query($db_config, $selectQry);
-                                            foreach ($experience_list as $key => $experience) {
+                                            $selectQry = "SELECT * FROM contact";
+                                            $contact_list = mysqli_query($db_config, $selectQry);
+                                            foreach ($contact_list as $key => $contact) {
 
 
                                             ?>
 
                                                 <?php
-                                                $status = $experience['status'];
+                                                $status = $contact['status'];
                                                 if ($status == 1) {
                                                     $status = "Active";
                                                 } else {
@@ -110,14 +110,14 @@
 
                                                 <tr>
                                                     <td><?php echo ++$key ?></td>
-                                                    <td><?php echo $experience['company_name'] ?></td>
-                                                    <td><?php echo $experience['company_name'] ?></td>
-                                                    <td><?php echo $experience['company_name'] ?></td>
-                                                    <td><?php echo $experience['company_name'] ?></td>
+                                                    <td><?php echo $contact['title'] ?></td>
+                                                    <td><?php echo $contact['short_bio'] ?></td>
+                                                    <td><?php echo $contact['email'] ?></td>
+                                                    <td><?php echo $contact['phone_number'] ?></td>
                                                     <td><span class="label label-success"><?php echo $status ?></span></td>
                                                     <td class="text-center">
                                                         <ul class="icons-list">
-                                                            <li><a href="update_contactinfo.php"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="update_contactinfo.php?cont_id=<?php echo $contact['id'] ?>"><i class=" icon-pencil7"></i></a>
                                                             </li>
                                                         </ul>
                                                     </td>
