@@ -6,6 +6,7 @@
 
     <?php
     include "header_link_file.php";
+    require "./config/server_connect.php";
     ?>
 
 </head>
@@ -79,23 +80,41 @@
 
                                 <?php } ?>
 
+
+
+                                <?php
+                                $sm_id = $_GET['sm_id'];
+                                $getSelectQry = "SELECT * FROM social_media WHERE id={$sm_id}";
+                                $getResult = mysqli_query($db_config, $getSelectQry);
+
+
+                                ?>
+
+
                                 <form action="./config/contact_controlar.php" class="form-horizontal" method="POST">
                                     <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="Social"> Social Media
-                                                Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Social Media Name" class="form-control" id="Social" name="socialName">
-                                            </div>
-                                        </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="SocialLink"> Social Media
-                                                Link</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Social Media Link " class="form-control" id="SocialLink" name="SocialLink">
+                                        <?php
+                                        foreach ($getResult as $key => $singlSM) {
+
+
+                                        ?>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="Social"> Social Media
+                                                    Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your Social Media Name" class="form-control" id="Social" name="socialName" value="<?php echo $singlSM['social_media_name'] ?>">
+                                                </div>
                                             </div>
-                                        </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="SocialLink"> Social Media
+                                                    Link</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your Social Media Link " class="form-control" id="SocialLink" name="SocialLink" value="<?php echo $singlSM['social_media_link'] ?>">
+                                                </div>
+                                            </div>
                                     </div>
 
                                     <div class="modal-footer">
@@ -105,6 +124,7 @@
                                             Social
                                             Media</button>
                                     </div>
+                                <?php } ?>
                                 </form>
                             </div>
                         </div>

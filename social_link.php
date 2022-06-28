@@ -171,7 +171,7 @@
                                                     <td><span class="label label-success"><?php echo $status ?> </span></td>
                                                     <td class="text-center">
                                                         <ul class="icons-list">
-                                                            <li><a href="update_socialmedia.php"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="update_socialmedia.php?sm_id=<?php echo $social_media['id'] ?>"><i class=" icon-pencil7"></i></a>
                                                             <li><a href="#"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>
