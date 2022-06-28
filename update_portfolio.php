@@ -6,6 +6,7 @@
 
     <?php
     include "header_link_file.php";
+    require "./config/server_connect.php";
     ?>
 
 </head>
@@ -71,58 +72,75 @@
                                     <h5 class="modal-title">Update Portfolio</h5>
                                 </div>
 
+
+                                <?php
+
+                                $port_id = $_GET['port_id'];
+                                $getSelectDataQre = "SELECT * FROM portfolio WHERE id={$port_id}";
+                                $getResult = mysqli_query($db_config, $getSelectDataQre);
+                                ?>
+
                                 <form action="./config/portfolio_controlar.php" class="form-horizontal" method="POST">
                                     <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="projectName">Project Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your last Project Name" class="form-control" id="projectName" name="projectName">
-                                            </div>
-                                        </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="projectBio">Project Bio</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your project short discription " class="form-control" id="projectBio" name="projectBio">
-                                            </div>
-                                        </div>
+                                        <?php
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="catagory">Catagory</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type Catagory" class="form-control" id="catagory" name="catagory">
-                                            </div>
-                                        </div>
+                                        foreach ($getResult as $key => $singleData) {
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="cintName">Clint Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Clint Name" class="form-control" id="cintName" name="cintName">
-                                            </div>
-                                        </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="projectLanguage">Project
-                                                Language</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Project Language" class="form-control" id="projectLanguage" name="projectLanguage">
-                                            </div>
-                                        </div>
+                                        ?>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="projectPreview">Project Preview
-                                                Link</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Project Preview Link" class="form-control" id="projectPreview" name="projectPreview">
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="projectName">Project Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your last Project Name" class="form-control" id="projectName" name="projectName" value="<?php echo $singleData['project_name'] ?>">
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Image</label>
-                                            <div class="col-sm-9">
-                                                <input type="file" class="form-control" name="img">
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="projectBio">Project Bio</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your project short discription " class="form-control" id="projectBio" name="projectBio" value="<?php echo $singleData['project_bio'] ?>">
+                                                </div>
                                             </div>
-                                        </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="catagory">Catagory</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type Catagory" class="form-control" id="catagory" name="catagory" value="<?php echo $singleData['category'] ?>">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="cintName">Clint Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your Clint Name" class="form-control" id="cintName" name="cintName" value="<?php echo $singleData['clint_name'] ?>">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="projectLanguage">Project
+                                                    Language</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your Project Language" class="form-control" id="projectLanguage" name="projectLanguage" value="<?php echo $singleData['project_language'] ?>">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="projectPreview">Project Preview
+                                                    Link</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your Project Preview Link" class="form-control" id="projectPreview" name="projectPreview" value="<?php echo $singleData['project_preview_link'] ?>">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3">Image</label>
+                                                <div class="col-sm-9">
+                                                    <input type="file" class="form-control" name="img" value="<?php echo $singleData['image'] ?> ">
+                                                </div>
+                                            </div>
+                                        <?php } ?>
                                     </div>
 
                                     <div class="modal-footer">

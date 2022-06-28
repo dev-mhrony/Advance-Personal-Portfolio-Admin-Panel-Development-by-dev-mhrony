@@ -232,7 +232,7 @@
                                                     </td>
                                                     <td class="text-center">
                                                         <ul class="icons-list">
-                                                            <li><a href="update_portfolio.php"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="update_portfolio.php?port_id=<?php echo $portfolio['id'] ?>"><i class=" icon-pencil7"></i></a>
                                                             <li><a href="#"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>
