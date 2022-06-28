@@ -73,36 +73,53 @@
                                     <h5 class="modal-title">Update Education / Qualifications</h5>
                                 </div>
 
+
+                                <?php
+
+                                $edu_id = $_GET['edu_id'];
+                                $getSingleDataQry = "SELECT * FROM education WHERE id={$edu_id}";
+                                $getResult = mysqli_query($db_config, $getSingleDataQry);
+
+                                ?>
+
+
                                 <form class="form-horizontal" action="config/education_controlar.php" method="POST">
                                     <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="educationName">Education
-                                                Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your last education name" class="form-control" id="educationName" name="educationName">
-                                            </div>
-                                        </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="shortBio">Short Bio</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your project short discription " class="form-control" id="shortBio" name="shortBio">
-                                            </div>
-                                        </div>
+                                        <?php
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="startYear">Start Year</label>
-                                            <div class="col-sm-9">
-                                                <input type="number" placeholder="Type start year" class="form-control" id="startYear" name="startYear">
-                                            </div>
-                                        </div>
+                                        foreach ($getResult as $key => $singleData) {
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="endYear">End Year</label>
-                                            <div class="col-sm-9">
-                                                <input type="number" placeholder="Type your end year" class="form-control" id="endYear" name="endYear">
+                                        ?>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="educationName">Education
+                                                    Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your last education name" class="form-control" id="educationName" name="educationName" value="<?php echo $singleData['education_name'] ?>">
+                                                </div>
                                             </div>
-                                        </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="shortBio">Short Bio</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your project short discription " class="form-control" id="shortBio" name="shortBio" value="<?php echo $singleData['short_bio'] ?>">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="startYear">Start Year</label>
+                                                <div class="col-sm-9">
+                                                    <input type="number" placeholder="Type start year" class="form-control" id="startYear" name="startYear" value="<?php echo $singleData['start_year'] ?>">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="endYear">End Year</label>
+                                                <div class="col-sm-9">
+                                                    <input type="number" placeholder="Type your end year" class="form-control" id="endYear" name="endYear" value="<?php echo $singleData['end_year'] ?>">
+                                                </div>
+                                            </div>
                                     </div>
 
                                     <div class="modal-footer">
@@ -111,6 +128,8 @@
                                         <button type="submit" class="btn btn-primary" name="updateEdu">Add Education
                                             form</button>
                                     </div>
+
+                                <?php  } ?>
                                 </form>
                             </div>
                         </div>

@@ -62,21 +62,7 @@
                                     <h5 class="modal-title">Portfolio Add</h5>
                                 </div>
 
-                                <!-- Retun Message to Submite Info Start -->
-                                <?php
-                                if (isset($_GET['msg'])) {
 
-                                ?>
-
-                                    <div class="alert bg-success alert-styled-left">
-                                        <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
-                                        <span class="text-semibold">Good Job</span>
-                                        <?php echo $_GET['msg'] ?>
-                                    </div>
-
-                                <?php } ?>
-
-                                <!-- Retun Message to Submite Info End -->
 
 
                                 <form action="./config/education_controlar.php" class="form-horizontal" method="POST">
@@ -152,7 +138,21 @@
 
                                     </div>
 
+                                    <!-- Retun Message to Submite Info Start -->
+                                    <?php
+                                    if (isset($_GET['msg'])) {
 
+                                    ?>
+
+                                        <div class="alert bg-success alert-styled-left">
+                                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                            <span class="text-semibold">Good Job</span>
+                                            <?php echo $_GET['msg'] ?>
+                                        </div>
+
+                                    <?php } ?>
+
+                                    <!-- Retun Message to Submite Info End -->
 
                                     <table class="table datatable-basic table-bordered table-striped table-hover">
                                         <thead>
@@ -195,7 +195,7 @@
                                                     <td><span class="label label-success"><?php echo $status ?></span></td>
                                                     <td class="text-center">
                                                         <ul class="icons-list">
-                                                            <li><a href="update_education.php"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="update_education.php?edu_id=<?php echo $education['id'] ?>"><i class=" icon-pencil7"></i></a>
                                                             <li><a href="#"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>
