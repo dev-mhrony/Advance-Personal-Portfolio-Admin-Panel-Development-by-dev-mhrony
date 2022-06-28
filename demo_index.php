@@ -51,41 +51,9 @@
 
 
                     <!-- Horizontal form modal -->
-                    <div id="modal_form_horizontal">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <form action="" class="form-horizontal">
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="Social"> Social Media
-                                                Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Social Media Name"
-                                                    class="form-control" id="Social">
-                                            </div>
-                                        </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="SocialLink"> Social Media
-                                                Link</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Social Media Link "
-                                                    class="form-control" id="SocialLink">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <a href="social_link.php"><button type="button" class="btn btn-link"
-                                                data-dismiss="modal">Back to Social Media List
-                                            </button></a>
-                                        <button type="submit" class="btn btn-primary">Add Social Media</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
                     <!-- /horizontal form modal -->
+                    
                     <!-- Footer -->
                     <div class="footer text-muted">
                         &copy; 2022. <a href="#">Ghasful</a> by <a href="" target="_blank">MH RONY</a>

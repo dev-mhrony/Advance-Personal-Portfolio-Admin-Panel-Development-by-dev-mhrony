@@ -18,6 +18,7 @@
 
     <?php
     include "./include_section/top_navbar.php";
+    require "./config/server_connect.php";
     ?>
 
     <!-- /main navbar -->

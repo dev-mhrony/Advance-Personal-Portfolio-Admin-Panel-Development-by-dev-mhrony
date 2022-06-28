@@ -6,7 +6,7 @@
 
     <?php
     include "header_link_file.php";
-    include "./config/server_connect.php";
+    require "./config/server_connect.php";
     ?>
 
 </head>

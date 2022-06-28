@@ -47,69 +47,55 @@
                 </div>
                 <!-- /page header -->
 
-                <!-- ==Content area ==-->
+                <!-- ===Content area ==-->
                 <div class="content">
-
-                    <?php
-                    if (isset($_GET['msg'])) {
-
-                    ?>
-
-                        <div class="alert bg-success alert-styled-left">
-                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
-                            <span class="text-semibold">Good Job</span>
-                            <?php echo $_GET['msg'] ?>
-                        </div>
-
-                    <?php } ?>
 
 
                     <!-- Horizontal form modal -->
+
                     <div id="modal_form_horizontal">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
 
-                                    <h5 class="modal-title">Add Exparience</h5>
+                                    <h5 class="modal-title">Update Home Section</h5>
                                 </div>
 
-                                <form action="./config/exparience_controlar.php" class="form-horizontal" method="POST">
+                                <form class="form-horizontal" action="config/home_controlar.php" method="POST">
                                     <div class="modal-body">
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3" for="companyName">Company Name</label>
+                                            <label class="control-label col-sm-3" for="YourName">Your Name</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your last company name" class="form-control" id="companyName" name="companyName">
+                                                <input type="text" placeholder="Type your Your Name" class="form-control" id="YourName" name="YourName">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3" for="shortBio">Short Bio</label>
+                                            <label class="control-label col-sm-3" for="Description">Description</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your project short discription " class="form-control" id="shortBio" name="shortBio">
+                                                <input type="text" placeholder="Type your project discription " class="form-control" id="Description" name="Description">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3" for="start_date">Start Job
-                                                Date</label>
+                                            <label class="control-label col-sm-3" for="Link">Link</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type join year" class="form-control" id="start_date" name="startJob">
+                                                <input type="number" placeholder="Type Link" class="form-control" id="Link" name="Link">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3" for="end_date">End Job Date</label>
+                                            <label class="control-label col-sm-3" for="Image">Image</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your end job year" class="form-control" id="end_date" name="endJob">
+                                                <input type="number" placeholder="Type your end year" class="form-control" id="Image" name="Image">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="modal-footer">
-                                        <a href="exparience.php"><button type="button" class="btn btn-link" data-dismiss="modal">Back to Exparience list
+                                        <a href="home_section.php"><button type="button" class="btn btn-link" data-dismiss="modal">Back to Home
                                             </button></a>
-                                        <button type="submit" class="btn btn-primary" name="addExparince">Add
-                                            Exparience</button>
+                                        <button type="submit" class="btn btn-primary" name="updateHome">Update Home Section</button>
                                     </div>
                                 </form>
                             </div>
@@ -118,15 +104,9 @@
                     <!-- /horizontal form modal -->
 
 
-                    <!-- Dashboard content -->
-                    <div class="row">
 
 
-
-
-                    </div>
-                    <!-- /dashboard content -->
-
+                    <!-- /horizontal form modal -->
 
                     <!-- Footer -->
                     <div class="footer text-muted">

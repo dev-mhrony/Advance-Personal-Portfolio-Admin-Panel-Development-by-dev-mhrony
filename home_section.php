@@ -5,9 +5,9 @@
 <head>
 
     <?php
-	include "header_link_file.php";
+    include "header_link_file.php";
     include "./config/server_connect.php";
-	?>
+    ?>
 
 </head>
 
@@ -17,8 +17,8 @@
 
 
     <?php
-	include "./include_section/top_navbar.php";
-	?>
+    include "./include_section/top_navbar.php";
+    ?>
 
     <!-- /main navbar -->
 
@@ -30,8 +30,8 @@
 
             <!-- Main sidebar -->
             <?php
-			include "./include_section/main_sidebar.php";
-			?>
+            include "./include_section/main_sidebar.php";
+            ?>
             <!-- /main sidebar -->
 
 
@@ -51,62 +51,6 @@
                 <!-- Content area -->
                 <div class="content">
 
-
-                    <!-- ================================== Pop UP Windo================ -->
-                    <div id="modal_form_horizontal" class="modal fade">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h5 class="modal-title">Update Home Section</h5>
-                                </div>
-
-                                <form action="#" class="form-horizontal" action="" method="POST">
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="YourName">Your Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your name" class="form-control"
-                                                    id="YourName">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="Description">Description</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your project short discription "
-                                                    class="form-control" id="Description">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="Link">Link</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Select or Type your catagory"
-                                                    class="form-control" id="Link">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="Image">Image</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Clint Name" data-mask="+99-99-9999-9999"
-                                                    class="form-control" id="Image">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-link" data-dismiss="modal">Back to
-                                            List</button>
-                                        <button type="submit" class="btn btn-primary">Update</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ================================ Pop UP Windo Close================ -->
 
 
                     <!-- Dashboard content -->
@@ -146,49 +90,47 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php 
-                                
-                                            $selectQry = "SELECT * FROM home_edit_section";
-                                            
-                                            $home_section_list = mysqli_query($db_config , $selectQry);
-                                            foreach ($home_section_list as $key => $home){
-                                    
-                        
-                                            ?>
-
-
-                                            <!-- ============== Active Status Show in Result 1 to active =============== -->
                                             <?php
-                                             $status = $home ['status'];
-                                             
-                                             if($status == 1){
-                                                $status = "Active";
-                                             }else{
-                                                $status = "In-Active";
-                                            }
+
+                                            $selectQry = "SELECT * FROM home_edit_section";
+
+                                            $home_section_list = mysqli_query($db_config, $selectQry);
+                                            foreach ($home_section_list as $key => $home) {
+
+
                                             ?>
 
-                                            <tr>
-                                                <td><?php echo ++$key?>
-                                                </td>
-                                                <td><?php echo $home ['your_name']?></td>
-                                                <td><?php echo $home ['description']?></td>
-                                                <td><?php echo $home ['link']?></td>
-                                                <td><?php echo $home ['image']?></td>
-                                                <td><span class="label label-success"><?php echo $status ?></span>
-                                                </td>
-                                                <td class="text-center">
-                                                    <ul class="icons-list">
-                                                        <li><a href="#"><i class=" icon-pencil7" data-toggle="modal"
-                                                                    data-target="#modal_form_horizontal"
-                                                                    data-target="#modal_form_horizontal"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
 
-                                            <?php 
-                                             };
+                                                <!-- ============== Active Status Show in Result 1 to active =============== -->
+                                                <?php
+                                                $status = $home['status'];
+
+                                                if ($status == 1) {
+                                                    $status = "Active";
+                                                } else {
+                                                    $status = "In-Active";
+                                                }
+                                                ?>
+
+                                                <tr>
+                                                    <td><?php echo ++$key ?>
+                                                    </td>
+                                                    <td><?php echo $home['your_name'] ?></td>
+                                                    <td><?php echo $home['description'] ?></td>
+                                                    <td><?php echo $home['link'] ?></td>
+                                                    <td><?php echo $home['image'] ?></td>
+                                                    <td><span class="label label-success"><?php echo $status ?></span>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <ul class="icons-list">
+                                                            <li><a href="update_home_section.php"><i class=" icon-pencil7"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+
+                                            <?php
+                                            };
                                             ?>
 
                                         </tbody>
