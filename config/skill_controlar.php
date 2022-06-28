@@ -2,6 +2,8 @@
 
 include "./server_connect.php";
 
+// This For Skill Add Section
+
 if (isset($_POST["skillSubmit"])) {
     $SkillName = $_POST['SkillName'];
     $Percentage = $_POST['Percentage'];
@@ -25,3 +27,6 @@ if (isset($_POST["skillSubmit"])) {
     }
     header("location: ../skill.php?msg={$message}");
 }
+
+
+// This For Skill Update Section

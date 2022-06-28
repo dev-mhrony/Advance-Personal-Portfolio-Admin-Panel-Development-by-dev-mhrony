@@ -22,3 +22,6 @@ if (isset($_POST["add_socialMedia"])) {
     }
     header("location: ../social_link.php?msg={$message}");
 }
+
+
+// This For Social Media Update Section

@@ -25,3 +25,6 @@ if (isset($_POST["addPortfolio"])) {
     }
     header("location: ../portfoli.php?msg={$message}");
 }
+
+
+// This For Portfolio Update Section
