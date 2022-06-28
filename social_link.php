@@ -58,29 +58,29 @@
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h5 class="modal-title">Update Social Link Section</h5>
+                                    <h5 class="modal-title">Add Social Media</h5>
                                 </div>
 
-                                <form action="#" class="form-horizontal">
+                                <form action="./config/social_controlar.php" class="form-horizontal" method="POST">
                                     <div class="modal-body">
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3">Social Media</label>
+                                            <label class="control-label col-sm-3" for="Social">Social Media</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type social media name" class="form-control">
+                                                <input type="text" placeholder="Type social media name" class="form-control" id="Social" name="socialName">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
-                                            <label class="control-label col-sm-3">Social Media Link</label>
+                                            <label class="control-label col-sm-3" for="SocialLink">Social Media Link</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your social media Link " class="form-control">
+                                                <input type="text" placeholder="Type your social media Link " class="form-control" id="SocialLink" name="SocialLink">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Update</button>
+                                        <button type="submit" class="btn btn-primary" name="add_socialMedia"> Add</button>
                                     </div>
                                 </form>
                             </div>
@@ -171,7 +171,7 @@
                                                     <td><span class="label label-success"><?php echo $status ?> </span></td>
                                                     <td class="text-center">
                                                         <ul class="icons-list">
-                                                            <li><a href="#"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="update_socialmedia.php"><i class=" icon-pencil7"></i></a>
                                                             <li><a href="#"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>

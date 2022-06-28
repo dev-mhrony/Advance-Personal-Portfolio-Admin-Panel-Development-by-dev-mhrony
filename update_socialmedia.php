@@ -5,8 +5,8 @@
 <head>
 
     <?php
-	include "header_link_file.php";
-	?>
+    include "header_link_file.php";
+    ?>
 
 </head>
 
@@ -16,8 +16,8 @@
 
 
     <?php
-	include "./include_section/top_navbar.php";
-	?>
+    include "./include_section/top_navbar.php";
+    ?>
 
     <!-- /main navbar -->
 
@@ -29,8 +29,8 @@
 
             <!-- Main sidebar -->
             <?php
-			include "./include_section/main_sidebar.php";
-			?>
+            include "./include_section/main_sidebar.php";
+            ?>
             <!-- /main sidebar -->
 
 
@@ -66,17 +66,16 @@
                                 <br>
 
                                 <?php
-                                    if(isset($_GET['msg'])){
-                                        
-                                    
+                                if (isset($_GET['msg'])) {
+
+
                                 ?>
 
-                                <div class="alert bg-success alert-styled-left">
-                                    <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span
-                                            class="sr-only">Close</span></button>
-                                    <span class="text-semibold">Good Job</span>
-                                    <?php echo $_GET['msg']?>
-                                </div>
+                                    <div class="alert bg-success alert-styled-left">
+                                        <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                                        <span class="text-semibold">Good Job</span>
+                                        <?php echo $_GET['msg'] ?>
+                                    </div>
 
                                 <?php } ?>
 
@@ -86,8 +85,7 @@
                                             <label class="control-label col-sm-3" for="Social"> Social Media
                                                 Name</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Social Media Name"
-                                                    class="form-control" id="Social" name="socialName">
+                                                <input type="text" placeholder="Type your Social Media Name" class="form-control" id="Social" name="socialName">
                                             </div>
                                         </div>
 
@@ -95,17 +93,15 @@
                                             <label class="control-label col-sm-3" for="SocialLink"> Social Media
                                                 Link</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Social Media Link "
-                                                    class="form-control" id="SocialLink" name="SocialLink">
+                                                <input type="text" placeholder="Type your Social Media Link " class="form-control" id="SocialLink" name="SocialLink">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="modal-footer">
-                                        <a href="social_link.php"><button type="button" class="btn btn-link"
-                                                data-dismiss="modal">Back to Social Media List
+                                        <a href="social_link.php"><button type="button" class="btn btn-link" data-dismiss="modal">Back to Social Media List
                                             </button></a>
-                                        <button type="submit" class="btn btn-primary" name="add_socialMedia">Add
+                                        <button type="submit" class="btn btn-primary">Add
                                             Social
                                             Media</button>
                                     </div>
