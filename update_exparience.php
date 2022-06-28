@@ -70,7 +70,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
 
-                                    <h5 class="modal-title">Add Exparience</h5>
+                                    <h5 class="modal-title">Update Exparience</h5>
                                 </div>
 
                                 <form action="./config/exparience_controlar.php" class="form-horizontal" method="POST">

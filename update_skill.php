@@ -5,8 +5,8 @@
 <head>
 
     <?php
-	include "header_link_file.php";
-	?>
+    include "header_link_file.php";
+    ?>
 
 </head>
 
@@ -16,8 +16,8 @@
 
 
     <?php
-	include "./include_section/top_navbar.php";
-	?>
+    include "./include_section/top_navbar.php";
+    ?>
 
     <!-- /main navbar -->
 
@@ -29,8 +29,8 @@
 
             <!-- Main sidebar -->
             <?php
-			include "./include_section/main_sidebar.php";
-			?>
+            include "./include_section/main_sidebar.php";
+            ?>
             <!-- /main sidebar -->
 
 
@@ -50,16 +50,15 @@
                 <div class="content">
 
                     <?php
-                       if(isset($_GET['msg'])){
-                                        
+                    if (isset($_GET['msg'])) {
+
                     ?>
 
-                    <div class="alert bg-success alert-styled-left">
-                        <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span
-                                class="sr-only">Close</span></button>
-                        <span class="text-semibold">Good Job</span>
-                        <?php echo $_GET['msg']?>
-                    </div>
+                        <div class="alert bg-success alert-styled-left">
+                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                            <span class="text-semibold">Good Job</span>
+                            <?php echo $_GET['msg'] ?>
+                        </div>
 
                     <?php } ?>
 
@@ -70,7 +69,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
 
-                                    <h5 class="modal-title">Add Skill</h5>
+                                    <h5 class="modal-title">Update Skill</h5>
                                 </div>
 
                                 <form action="./config/skill_controlar.php" class="form-horizontal" method="POST">
@@ -78,31 +77,27 @@
                                         <div class="form-group">
                                             <label class="control-label col-sm-3" for="Skill"> Skill Name</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your last Skill Name"
-                                                    class="form-control" id="Skill" name="SkillName">
+                                                <input type="text" placeholder="Type your last Skill Name" class="form-control" id="Skill" name="SkillName">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-3" for="Percentage"> Percentage</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Percentage "
-                                                    class="form-control" id="Percentage" name="Percentage">
+                                                <input type="text" placeholder="Type your Percentage " class="form-control" id="Percentage" name="Percentage">
                                             </div>
                                         </div>
 
                                         <div class="form-group">
                                             <label class="control-label col-sm-3" for="Experience">Experience</label>
                                             <div class="col-sm-9">
-                                                <input type="text" placeholder="Type Experience Year"
-                                                    class="form-control" id="Experience" name="Experience">
+                                                <input type="text" placeholder="Type Experience Year" class="form-control" id="Experience" name="Experience">
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class="modal-footer">
-                                        <a href="skill.php"><button type="button" class="btn btn-link"
-                                                data-dismiss="modal">Back to Skill list
+                                        <a href="skill.php"><button type="button" class="btn btn-link" data-dismiss="modal">Back to Skill list
                                             </button></a>
                                         <button type="submit" class="btn btn-primary" name="skillSubmit">Add
                                             Skill</button>

@@ -5,9 +5,9 @@
 <head>
 
     <?php
-	include "header_link_file.php";
+    include "header_link_file.php";
     include "./config/server_connect.php";
-	?>
+    ?>
 
 </head>
 
@@ -17,8 +17,8 @@
 
 
     <?php
-	include "./include_section/top_navbar.php";
-	?>
+    include "./include_section/top_navbar.php";
+    ?>
 
     <!-- /main navbar -->
 
@@ -30,8 +30,8 @@
 
             <!-- Main sidebar -->
             <?php
-			include "./include_section/main_sidebar.php";
-			?>
+            include "./include_section/main_sidebar.php";
+            ?>
             <!-- /main sidebar -->
 
 
@@ -50,61 +50,6 @@
 
                 <!-- Content area -->
                 <div class=" content">
-
-
-                    <!-- ================================ Pop UP Windo================ -->
-                    <div id="modal_form_horizontal" class="modal fade">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    <h5 class="modal-title">Update Your Contact Page</h5>
-                                </div>
-
-                                <form action="#" class="form-horizontal">
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Title</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type Title" class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Short Bio</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your site short discription "
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">E-mail</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your email" class="form-control">
-                                            </div>
-                                        </div>
-
-
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3">Phone Number</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your phone number"
-                                                    class="form-control">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-link" data-dismiss="modal">Close</button>
-                                        <button type="submit" class="btn btn-primary">Update</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- ================================= Pop UP Windo Close================ -->
 
 
                     <!-- Dashboard content -->
@@ -145,40 +90,38 @@
                                         <tbody>
 
 
-                                            <?php 
+                                            <?php
                                             $selectQry = "SELECT * FROM experience";
                                             $experience_list = mysqli_query($db_config, $selectQry);
-                                            foreach($experience_list as $key => $experience){
-                                                
-                                            
+                                            foreach ($experience_list as $key => $experience) {
+
+
                                             ?>
 
-                                            <?php 
-                                            $status = $experience['status'];
-                                            if($status == 1){
-                                                $status = "Active";
-                                            }else{
-                                                $status = "Deactive";
-                                            }
-                                            ?>
+                                                <?php
+                                                $status = $experience['status'];
+                                                if ($status == 1) {
+                                                    $status = "Active";
+                                                } else {
+                                                    $status = "Deactive";
+                                                }
+                                                ?>
 
 
-                                            <tr>
-                                                <td><?php echo ++$key ?></td>
-                                                <td><?php echo $experience['company_name'] ?></td>
-                                                <td><?php echo $experience['company_name'] ?></td>
-                                                <td><?php echo $experience['company_name'] ?></td>
-                                                <td><?php echo $experience['company_name'] ?></td>
-                                                <td><span class="label label-success"><?php echo $status ?></span></td>
-                                                <td class="text-center">
-                                                    <ul class="icons-list">
-                                                        <li><a href="#"><i class=" icon-pencil7" data-toggle="modal"
-                                                                    data-target="#modal_form_horizontal"
-                                                                    data-target="#modal_form_horizontal"></i></a>
-                                                        </li>
-                                                    </ul>
-                                                </td>
-                                            </tr>
+                                                <tr>
+                                                    <td><?php echo ++$key ?></td>
+                                                    <td><?php echo $experience['company_name'] ?></td>
+                                                    <td><?php echo $experience['company_name'] ?></td>
+                                                    <td><?php echo $experience['company_name'] ?></td>
+                                                    <td><?php echo $experience['company_name'] ?></td>
+                                                    <td><span class="label label-success"><?php echo $status ?></span></td>
+                                                    <td class="text-center">
+                                                        <ul class="icons-list">
+                                                            <li><a href="update_contactinfo.php"><i class=" icon-pencil7"></i></a>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
                                             <?php } ?>
                                         </tbody>
                                     </table>

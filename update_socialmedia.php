@@ -60,7 +60,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
 
-                                    <h5 class="modal-title">Add Social Media</h5>
+                                    <h5 class="modal-title">Update Social Media</h5>
                                 </div>
 
                                 <br>

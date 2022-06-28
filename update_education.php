@@ -70,7 +70,7 @@
                             <div class="modal-content">
                                 <div class="modal-header">
 
-                                    <h5 class="modal-title">Add Education / Qualifications</h5>
+                                    <h5 class="modal-title">Update Education / Qualifications</h5>
                                 </div>
 
                                 <form class="form-horizontal" action="config/education_controlar.php" method="POST">
