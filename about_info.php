@@ -109,7 +109,7 @@
                                         <td><?php echo $about_info['language'] ?></td>
                                         <td class="text-center">
                                             <ul class="icons-list">
-                                                <li><a href="update_aboutinfo.php"><i class=" icon-pencil7"></i></a>
+                                                <li><a href="update_aboutinfo.php?about_id=<?php echo $about_info['id'] ?>"><i class=" icon-pencil7"></i></a>
                                                 </li>
                                             </ul>
                                         </td>

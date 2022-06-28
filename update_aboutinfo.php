@@ -6,6 +6,7 @@
 
     <?php
     include "header_link_file.php";
+    include "./config/server_connect.php";
     ?>
 
 </head>
@@ -49,6 +50,12 @@
                 <!-- ===Content area ==-->
                 <div class="content">
 
+                    <?php
+                    $about_id = $_GET['about_id'];
+                    $getSingleDataQry = "SELECT * FROM about_info WHERE id={$about_id}";
+                    $getResult = mysqli_query($db_config, $getSingleDataQry);
+
+                    ?>
 
                     <!-- Horizontal form modal -->
                     <div class="modal-content">
@@ -57,70 +64,79 @@
                             <h5 class="modal-title">Update About Info</h5>
                         </div>
 
+
+
                         <form action="#" class="form-horizontal">
                             <div class="modal-body">
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="FirstName">First Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" placeholder="Type your fast name" id="FirstName" class="form-control">
-                                    </div>
-                                </div>
+                                <?php
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="LirstName">Lirst Name</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" placeholder="Type your project lirst name" id="LirstName" class="form-control">
-                                    </div>
-                                </div>
+                                foreach ($getResult as $key => $aboutSingleData) {
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="DateOfBirth">Date Of Birth Year</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" placeholder="Type your date of birth year" id="DateOfBirth" class="form-control">
+                                ?>
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="FirstName">First Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" placeholder="Type your fast name" id="FirstName" class="form-control" value="<?php echo $aboutSingleData['fast_name'] ?>">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="Nationality">Nationality</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" placeholder="Type your nationality" class="form-control" id="Nationality">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="LirstName">Lirst Name</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" placeholder="Type your project lirst name" id="LirstName" class="form-control" value="<?php echo $aboutSingleData['last_name'] ?>">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="Freelance">Freelance</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" placeholder="Are your Freelance?" class="form-control" id="Freelance">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="DateOfBirth">Date Of Birth Year</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" placeholder="Type your date of birth year" id="DateOfBirth" class="form-control" value="<?php echo $aboutSingleData['age'] ?>">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="Address">Address</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" placeholder="Location" class="form-control" id="Address">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="Nationality">Nationality</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" placeholder="Type your nationality" class="form-control" id="Nationality" value="<?php echo $aboutSingleData['nationality'] ?>">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="PhoneNumber">Phone Number</label>
-                                    <div class="col-sm-9">
-                                        <input type="number" placeholder="" class="form-control" id="PhoneNumber">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="Freelance">Freelance</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" placeholder="Are your Freelance?" class="form-control" id="Freelance" value="<?php echo $aboutSingleData['freelance'] ?>">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="Email">E-mail</label>
-                                    <div class="col-sm-9">
-                                        <input type="email" placeholder="Type your Contact E-mail" id="Email" class="form-control">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="Address">Address</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" placeholder="Location" class="form-control" id="Address" value="<?php echo $aboutSingleData['address'] ?>">
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="Langages">Langages</label>
-                                    <div class="col-sm-9">
-                                        <input type="text" placeholder="Type your Speek Langages" id="Langages" class="form-control">
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="PhoneNumber">Phone Number</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" placeholder="" class="form-control" id="PhoneNumber" value="<?php echo $aboutSingleData['phone_number'] ?>">
+                                        </div>
                                     </div>
-                                </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="Email">E-mail</label>
+                                        <div class="col-sm-9">
+                                            <input type="email" placeholder="Type your Contact E-mail" id="Email" class="form-control" value="<?php echo $aboutSingleData['email'] ?>">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-3" for="Langages">Langages</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" placeholder="Type your Speek Langages" id="Langages" class="form-control" value="<?php echo $aboutSingleData['language'] ?>">
+                                        </div>
+                                    </div>
+
+                                <?php } ?>
                             </div>
 
                             <div class="modal-footer">
