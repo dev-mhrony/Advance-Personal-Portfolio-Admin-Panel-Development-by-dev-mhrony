@@ -180,7 +180,7 @@
                                                     </td>
                                                     <td class="text-center">
                                                         <ul class="icons-list">
-                                                            <li><a href="update_skill.php"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="update_skill.php?skill_id=<?php echo $skill['id'] ?>"><i class=" icon-pencil7"></i></a>
                                                             <li><a href="#"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>

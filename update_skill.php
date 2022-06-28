@@ -6,6 +6,7 @@
 
     <?php
     include "header_link_file.php";
+    require "./config/server_connect.php";
     ?>
 
 </head>
@@ -72,28 +73,44 @@
                                     <h5 class="modal-title">Update Skill</h5>
                                 </div>
 
+                                <?php
+                                $skill_id = $_GET['skill_id'];
+                                $getSelectDataQre = "SELECT * FROM skill WHERE id={$skill_id}";
+                                $getResult = mysqli_query($db_config, $getSelectDataQre);
+
+
+                                ?>
+
                                 <form action="./config/skill_controlar.php" class="form-horizontal" method="POST">
                                     <div class="modal-body">
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="Skill"> Skill Name</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your last Skill Name" class="form-control" id="Skill" name="SkillName">
-                                            </div>
-                                        </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="Percentage"> Percentage</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type your Percentage " class="form-control" id="Percentage" name="Percentage">
-                                            </div>
-                                        </div>
+                                        <?php
 
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="Experience">Experience</label>
-                                            <div class="col-sm-9">
-                                                <input type="text" placeholder="Type Experience Year" class="form-control" id="Experience" name="Experience">
+                                        foreach ($getResult as $key => $singleSkill) {
+
+                                        ?>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="Skill"> Skill Name</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your last Skill Name" class="form-control" id="Skill" name="SkillName" value="<?php echo $singleSkill['skill_name'] ?>">
+                                                </div>
                                             </div>
-                                        </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="Percentage"> Percentage</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" placeholder="Type your Percentage " class="form-control" id="Percentage" name="Percentage" value="<?php echo $singleSkill['percentage'] ?>">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label col-sm-3" for="Experience">Experience</label>
+                                                <div class="col-sm-9">
+                                                    <input type="number" placeholder="Type Experience Year" class="form-control" id="Experience" name="Experience" value="<?php echo $singleSkill['experience'] ?>">
+                                                </div>
+                                            </div>
+                                        <?php  } ?>
                                     </div>
 
                                     <div class="modal-footer">
