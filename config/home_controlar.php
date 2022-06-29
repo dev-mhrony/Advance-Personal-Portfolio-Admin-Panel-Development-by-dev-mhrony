@@ -5,10 +5,10 @@ require "server_connect.php";
 if (isset($_POST["updateHome"])) {
 
     $home_id = $_POST['home_id'];
-    $YourName = $_POST['YourName'];
-    $Description = $_POST['Description'];
-    $Link = $_POST['Link'];
-    $Image = $_POST['Image'];
+    $YourName = $_POST['yourName'];
+    $Description = $_POST['description'];
+    $Link = $_POST['link'];
+    $Image = $_POST['image'];
 
     if (empty($YourName) || empty($Description) || empty($Link)) {
         $message = "All File Required";

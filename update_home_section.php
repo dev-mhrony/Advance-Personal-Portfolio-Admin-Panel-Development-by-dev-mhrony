@@ -71,7 +71,7 @@
 
                                 ?>
 
-                                <form class="form-horizontal" action="./config/home_controlar.php" method="POST">
+                                <form class="form-horizontal" action="./config/home_controlar.php" method=" POST">
                                     <div class="modal-body">
 
                                         <?php
@@ -85,28 +85,28 @@
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="YourName">Your Name</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" placeholder="Type your Your Name" class="form-control" id="YourName" name="YourName" value="<?php echo $singleHome_data['your_name'] ?>">
+                                                    <input type="text" placeholder="Type your Your Name" class="form-control" id="YourName" name="yourName" value="<?php echo $singleHome_data['your_name'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="Description">Description</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" placeholder="Type your project discription " class="form-control" id="Description" name="Description" value="<?php echo $singleHome_data['description'] ?>">
+                                                    <input type="text" placeholder="Type your project discription " class="form-control" id="Description" name="description" value="<?php echo $singleHome_data['description'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="Link">Link</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" placeholder="Type Link" class="form-control" id="Link" name="Link" value="<?php echo $singleHome_data['link'] ?>">
+                                                    <input type="text" placeholder="Type Link" class="form-control" id="Link" name="link" value="<?php echo $singleHome_data['link'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="Image">Image</label>
                                                 <div class="col-sm-9">
-                                                    <input type="file" placeholder="Type your end year" class="form-control" id="Image">
+                                                    <input type="file" placeholder="Type your end year" class="form-control" id="Image" name="image">
                                                 </div>
                                             </div>
 
