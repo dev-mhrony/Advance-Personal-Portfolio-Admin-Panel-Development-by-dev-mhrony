@@ -116,9 +116,8 @@
                                     </div>
 
                                     <div class="panel-body">
-                                        Here you can update <code> Exparience Name </code> , <code> Short Bio </code>
-                                        and <code> Year </code>. You can also add your educational qualifications
-                                        through <code> Add Education Degree </code> here.
+
+                                        From here you can <code>Add</code> or <code>Update Skills</code> .
 
                                         <div class="text-right">
                                             <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_form_horizontal" data-target="#modal_form_horizontal">Add Skill</button></a>

@@ -41,8 +41,8 @@
                 <!-- Page header -->
                 <div class="breadcrumb-line">
                     <ul class="breadcrumb">
-                        <li><a href="index.html"><i class="icon-home2 position-left"></i> Deshbord</a></li>
-                        <li><a href="components_notifications_other.html">Home</a></li>
+                        <li><a href="index.php"><i class="icon-home2 position-left"></i> Deshbord</a></li>
+                        <li><a href="skill.php">Skill</a></li>
                     </ul>
                 </div>
                 <!-- /page header -->
@@ -89,25 +89,27 @@
                                         foreach ($getResult as $key => $singleSkill) {
 
                                         ?>
+                                            <input type="hidden" name="skill_id" value="<?php echo $singleSkill['id'] ?>">
+
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="Skill"> Skill Name</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" placeholder="Type your last Skill Name" class="form-control" id="Skill" name="SkillName" value="<?php echo $singleSkill['skill_name'] ?>">
+                                                    <input type="text" placeholder="Type your last Skill Name" class="form-control" id="Skill" name="skillName" value="<?php echo $singleSkill['skill_name'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="Percentage"> Percentage</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" placeholder="Type your Percentage " class="form-control" id="Percentage" name="Percentage" value="<?php echo $singleSkill['percentage'] ?>">
+                                                    <input type="text" placeholder="Type your Percentage " class="form-control" id="Percentage" name="percentage" value="<?php echo $singleSkill['percentage'] ?>">
                                                 </div>
                                             </div>
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="Experience">Experience</label>
                                                 <div class="col-sm-9">
-                                                    <input type="number" placeholder="Type Experience Year" class="form-control" id="Experience" name="Experience" value="<?php echo $singleSkill['experience'] ?>">
+                                                    <input type="number" placeholder="Type Experience Year" class="form-control" id="Experience" name="experience" value="<?php echo $singleSkill['experience'] ?>">
                                                 </div>
                                             </div>
                                         <?php  } ?>
@@ -116,7 +118,7 @@
                                     <div class="modal-footer">
                                         <a href="skill.php"><button type="button" class="btn btn-link" data-dismiss="modal">Back to Skill list
                                             </button></a>
-                                        <button type="submit" class="btn btn-primary" name="skillSubmit">Add
+                                        <button type="submit" class="btn btn-primary" name="updateSkill">Update
                                             Skill</button>
                                     </div>
                                 </form>

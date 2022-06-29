@@ -1,6 +1,6 @@
 <?php
 
-include "./server_connect.php";
+require "server_connect.php";
 
 // This For Skill Add Section
 
@@ -30,3 +30,32 @@ if (isset($_POST["skillSubmit"])) {
 
 
 // This For Skill Update Section
+
+
+if (isset($_POST["updateSkill"])) {
+
+    $skill_id = $_POST['skill_id'];
+    $skillName = $_POST['skillName'];
+    $percentage = $_POST['percentage'];
+    $experience = $_POST['experience'];
+
+
+    if (empty($skillName) || empty($percentage) || empty($experience)) {
+
+        $message = "All File Required";
+    } else {
+
+        $updateSkillQry = "UPDATE skill SET skill_name='{$skillName}', percentage='{$percentage}', experience='{$experience}' WHERE id='{$skill_id}'";
+
+        $issubmit_info = mysqli_query($db_config, $updateSkillQry) or die(mysqli_error($db_config));
+
+        if ($issubmit_info == true) {
+
+            $message = " <code>Skill</code> Info Update Success";
+        } else {
+
+            $message = " <code>Skill</code> Info Update Fail";
+        }
+    }
+    header("location: ../update_skill.php?skill_id={$skill_id}&msg={$message}");
+}
