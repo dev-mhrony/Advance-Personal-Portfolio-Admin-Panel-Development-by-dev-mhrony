@@ -41,8 +41,8 @@
                 <!-- Page header -->
                 <div class="breadcrumb-line">
                     <ul class="breadcrumb">
-                        <li><a href="index.html"><i class="icon-home2 position-left"></i> Deshbord</a></li>
-                        <li><a href="components_notifications_other.html">Home</a></li>
+                        <li><a href="index.php"><i class="icon-home2 position-left"></i> Deshbord</a></li>
+                        <li><a href="education.php">Education</a></li>
                     </ul>
                 </div>
                 <!-- /page header -->
@@ -91,6 +91,8 @@
                                         foreach ($getResult as $key => $singleData) {
 
                                         ?>
+
+                                            <input type="hidden" name="edu_id" value="<?php echo $singleData['id'] ?>">
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="educationName">Education
