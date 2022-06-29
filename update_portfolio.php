@@ -41,8 +41,8 @@
                 <!-- Page header -->
                 <div class="breadcrumb-line">
                     <ul class="breadcrumb">
-                        <li><a href="index.html"><i class="icon-home2 position-left"></i> Deshbord</a></li>
-                        <li><a href="components_notifications_other.html">Home</a></li>
+                        <li><a href="index.php"><i class="icon-home2 position-left"></i> Deshbord</a></li>
+                        <li><a href="portfoli.php">Portfolio</a></li>
                     </ul>
                 </div>
                 <!-- /page header -->
@@ -90,6 +90,9 @@
 
                                         ?>
 
+                                            <input type="hidden" name="port_id" value="<?php echo $singleData['id'] ?>">
+
+
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="projectName">Project Name</label>
                                                 <div class="col-sm-9">
@@ -127,8 +130,7 @@
                                             </div>
 
                                             <div class="form-group">
-                                                <label class="control-label col-sm-3" for="projectPreview">Project Preview
-                                                    Link</label>
+                                                <label class="control-label col-sm-3" for="projectPreview">Project Preview Link</label>
                                                 <div class="col-sm-9">
                                                     <input type="text" placeholder="Type your Project Preview Link" class="form-control" id="projectPreview" name="projectPreview" value="<?php echo $singleData['project_preview_link'] ?>">
                                                 </div>
@@ -146,7 +148,7 @@
                                     <div class="modal-footer">
                                         <a href="portfoli.php"><button type="button" class="btn btn-link" data-dismiss="modal">Back to Portfolio list
                                             </button></a>
-                                        <button type="submit" class="btn btn-primary" name="addPortfolio">Add
+                                        <button type="submit" class="btn btn-primary" name="updatPort">Add
                                             Portfolio</button>
                                     </div>
                                 </form>
