@@ -197,7 +197,7 @@
 
                                             <?php
 
-                                            $selectQry = "SELECT * FROM  portfolio";
+                                            $selectQry = "SELECT * FROM  portfolio WHERE status=1";
                                             $portfolio_list = mysqli_query($db_config, $selectQry);
 
                                             foreach ($portfolio_list as $key => $portfolio) {
@@ -233,7 +233,7 @@
                                                     <td class="text-center">
                                                         <ul class="icons-list">
                                                             <li><a href="update_portfolio.php?port_id=<?php echo $portfolio['id'] ?>"><i class=" icon-pencil7"></i></a>
-                                                            <li><a href="#"><i class="icon-trash"></i></a></li>
+                                                            <li><a href="./config/DeleteControlar/protDelete_controlar.php?port_id=<?php echo $portfolio['id'] ?>"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>
                                                     </td>
