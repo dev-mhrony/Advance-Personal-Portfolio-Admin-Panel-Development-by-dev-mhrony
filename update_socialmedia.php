@@ -44,8 +44,9 @@
                 <!-- Page header -->
                 <div class="breadcrumb-line">
                     <ul class="breadcrumb">
-                        <li><a href="index.html"><i class="icon-home2 position-left"></i> Deshbord</a></li>
-                        <li><a href="components_notifications_other.html">Home</a></li>
+                        <li><a href="index.php"><i class="icon-home2 position-left"></i> Deshbord</a></li>
+                        <li><a href="update_socialmedia.php">Social Media</a></li>
+                        <li>Update Social Media</li>
                     </ul>
                 </div>
                 <!-- /page header -->
@@ -59,12 +60,7 @@
                     <div id="modal_form_horizontal">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
-                                <div class="modal-header">
 
-                                    <h5 class="modal-title">Update Social Media</h5>
-                                </div>
-
-                                <br>
 
                                 <?php
                                 if (isset($_GET['msg'])) {
@@ -80,6 +76,14 @@
 
                                 <?php } ?>
 
+                                <div class="modal-header">
+
+                                    <h5 class="modal-title">Update Social Media</h5>
+                                </div>
+
+                                <br>
+
+
 
 
                                 <?php
@@ -91,7 +95,9 @@
                                 ?>
 
 
-                                <form action="./config/contact_controlar.php" class="form-horizontal" method="POST">
+
+
+                                <form action="./config/social_controlar.php" class="form-horizontal" method="POST">
                                     <div class="modal-body">
 
                                         <?php
@@ -99,6 +105,8 @@
 
 
                                         ?>
+                                            <input type="hidden" name="sm_id" value="<?php echo $singlSM['id'] ?>">
+
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="Social"> Social Media
@@ -112,7 +120,7 @@
                                                 <label class="control-label col-sm-3" for="SocialLink"> Social Media
                                                     Link</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" placeholder="Type your Social Media Link " class="form-control" id="SocialLink" name="SocialLink" value="<?php echo $singlSM['social_media_link'] ?>">
+                                                    <input type="url" placeholder="Type your Social Media Link " class="form-control" id="SocialLink" name="SocialLink" value="<?php echo $singlSM['social_media_link'] ?>">
                                                 </div>
                                             </div>
                                     </div>
@@ -120,9 +128,7 @@
                                     <div class="modal-footer">
                                         <a href="social_link.php"><button type="button" class="btn btn-link" data-dismiss="modal">Back to Social Media List
                                             </button></a>
-                                        <button type="submit" class="btn btn-primary">Add
-                                            Social
-                                            Media</button>
+                                        <button type="submit" class="btn btn-primary" name="updateSM">Update Social Media</button>
                                     </div>
                                 <?php } ?>
                                 </form>

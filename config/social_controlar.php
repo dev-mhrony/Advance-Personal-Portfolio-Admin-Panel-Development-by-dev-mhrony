@@ -25,3 +25,31 @@ if (isset($_POST["add_socialMedia"])) {
 
 
 // This For Social Media Update Section
+
+
+if (isset($_POST["updateSM"])) {
+
+    $sm_id = $_POST['sm_id'];
+    $socialName = $_POST['socialName'];
+    $SocialLink = $_POST['SocialLink'];
+
+
+    if (empty($socialName) || empty($SocialLink)) {
+
+        $message = "All File Required";
+    } else {
+
+        $updateSkillQry = "UPDATE social_media SET social_media_name='{$socialName}', social_media_link='{$SocialLink}'WHERE id='{$sm_id}'";
+
+        $issubmit_info = mysqli_query($db_config, $updateSkillQry);
+
+        if ($issubmit_info == true) {
+
+            $message = " <code>Social Media</code> Info Update Success";
+        } else {
+
+            $message = " <code>Social Media</code> Info Update Fail";
+        }
+    }
+    header("location: ../update_socialmedia.php?sm_id={$sm_id}&msg={$message}");
+}

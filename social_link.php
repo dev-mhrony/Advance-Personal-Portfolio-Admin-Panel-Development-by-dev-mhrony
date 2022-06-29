@@ -107,9 +107,7 @@
                                     </div>
 
                                     <div class="panel-body">
-                                        Here you can update <code> Social Media Name </code> , <code> Short Bio </code>
-                                        and <code> Year </code>. You can also add your educational qualifications
-                                        through <code> Add Education Degree </code> here.
+                                        Here you can <code>Add</code> and edit <code>Social Media</code>.
 
                                         <div class="text-right">
                                             <a href="#"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_form_horizontal" data-target="#modal_form_horizontal">Add
