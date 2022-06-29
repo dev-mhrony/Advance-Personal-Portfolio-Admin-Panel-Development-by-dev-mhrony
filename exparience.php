@@ -6,7 +6,7 @@
 
     <?php
     include "header_link_file.php";
-    include "./config/server_connect.php";
+    require "./config/server_connect.php";
     ?>
 
 </head>
@@ -197,7 +197,7 @@
                                                     <td><span class="label label-success"><?php echo $status ?></span></td>
                                                     <td class="text-center">
                                                         <ul class="icons-list">
-                                                            <li><a href="update_exparience.php?exper_id=<?php echo  $experience['id'] ?>"><i class=" icon-pencil7"></i></a>
+                                                            <li><a href="update_exparience.php?exp_id=<?php echo  $experience['id'] ?>"><i class=" icon-pencil7"></i></a>
                                                             <li><a href="#"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>

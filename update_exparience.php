@@ -41,8 +41,8 @@
                 <!-- Page header -->
                 <div class="breadcrumb-line">
                     <ul class="breadcrumb">
-                        <li><a href="index.html"><i class="icon-home2 position-left"></i> Deshbord</a></li>
-                        <li><a href="components_notifications_other.html">Home</a></li>
+                        <li><a href="index.php"><i class="icon-home2 position-left"></i> Deshbord</a></li>
+                        <li><a href="exparience.php">Exparience</a></li>
                     </ul>
                 </div>
                 <!-- /page header -->
@@ -75,7 +75,7 @@
 
 
                                 <?php
-                                $exp_id = $_GET['exper_id'];
+                                $exp_id = $_GET['exp_id'];
                                 $getSelectDataQre = "SELECT * FROM experience WHERE id={$exp_id}";
                                 $resultQre = mysqli_query($db_config, $getSelectDataQre);
 
@@ -90,6 +90,7 @@
 
 
                                         ?>
+                                            <input type="hidden" name="exp_id" value="<?php echo $singleExp['id'] ?>">
 
                                             <div class="form-group">
                                                 <label class="control-label col-sm-3" for="companyName">Company Name</label>
@@ -126,7 +127,7 @@
                                     <div class="modal-footer">
                                         <a href="exparience.php"><button type="button" class="btn btn-link" data-dismiss="modal">Back to Exparience list
                                             </button></a>
-                                        <button type="submit" class="btn btn-primary" name="addExparince">Add
+                                        <button type="submit" class="btn btn-primary" name="updateExp">Update
                                             Exparience</button>
                                     </div>
                                 </form>
