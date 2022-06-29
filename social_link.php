@@ -145,7 +145,7 @@
                                         <tbody>
 
                                             <?php
-                                            $selectQry = "SELECT * FROM social_media";
+                                            $selectQry = "SELECT * FROM social_media WHERE status=1";
                                             $social_media_list = mysqli_query($db_config, $selectQry);
                                             foreach ($social_media_list as $key => $social_media) {
 
@@ -170,7 +170,7 @@
                                                     <td class="text-center">
                                                         <ul class="icons-list">
                                                             <li><a href="update_socialmedia.php?sm_id=<?php echo $social_media['id'] ?>"><i class=" icon-pencil7"></i></a>
-                                                            <li><a href="#"><i class="icon-trash"></i></a></li>
+                                                            <li><a href="./config/DeleteControlar/smDelete_controlar.php?sm_id=<?php echo $social_media['id'] ?>"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>
                                                     </td>
