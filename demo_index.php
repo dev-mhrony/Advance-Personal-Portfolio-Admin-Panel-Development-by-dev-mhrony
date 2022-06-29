@@ -5,8 +5,8 @@
 <head>
 
     <?php
-	include "header_link_file.php";
-	?>
+    include "header_link_file.php";
+    ?>
 
 </head>
 
@@ -16,8 +16,8 @@
 
 
     <?php
-	include "./include_section/top_navbar.php";
-	?>
+    include "./include_section/top_navbar.php";
+    ?>
 
     <!-- /main navbar -->
 
@@ -29,8 +29,8 @@
 
             <!-- Main sidebar -->
             <?php
-			include "./include_section/main_sidebar.php";
-			?>
+            include "./include_section/main_sidebar.php";
+            ?>
             <!-- /main sidebar -->
 
 
@@ -40,8 +40,8 @@
                 <!-- Page header -->
                 <div class="breadcrumb-line">
                     <ul class="breadcrumb">
-                        <li><a href="index.html"><i class="icon-home2 position-left"></i> Deshbord</a></li>
-                        <li><a href="components_notifications_other.html">Home</a></li>
+                        <li><a href="index.php"><i class="icon-home2 position-left"></i> Deshbord</a></li>
+                        <li>Home</li>
                     </ul>
                 </div>
                 <!-- /page header -->
@@ -53,7 +53,7 @@
                     <!-- Horizontal form modal -->
 
                     <!-- /horizontal form modal -->
-                    
+
                     <!-- Footer -->
                     <div class="footer text-muted">
                         &copy; 2022. <a href="#">Ghasful</a> by <a href="" target="_blank">MH RONY</a>
