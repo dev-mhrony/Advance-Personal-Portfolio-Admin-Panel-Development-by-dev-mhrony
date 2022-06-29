@@ -172,7 +172,7 @@
                                         <tbody>
 
                                             <?php
-                                            $selectQry = "SELECT * FROM experience";
+                                            $selectQry = "SELECT * FROM experience WHERE status=1";
                                             $experience_list = mysqli_query($db_config, $selectQry);
                                             foreach ($experience_list as $key => $experience) {
 
@@ -198,7 +198,7 @@
                                                     <td class="text-center">
                                                         <ul class="icons-list">
                                                             <li><a href="update_exparience.php?exp_id=<?php echo  $experience['id'] ?>"><i class=" icon-pencil7"></i></a>
-                                                            <li><a href="#"><i class="icon-trash"></i></a></li>
+                                                            <li><a href="./config/DeleteControlar/expDelete_controlar.php?exp_id=<?php echo  $experience['id'] ?>"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>
                                                     </td>
