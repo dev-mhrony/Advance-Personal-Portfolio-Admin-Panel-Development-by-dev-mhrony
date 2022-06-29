@@ -155,7 +155,7 @@
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $selectQry = "SELECT * FROM skill";
+                                            $selectQry = "SELECT * FROM skill WHERE status=1";
                                             $skill_list = mysqli_query($db_config, $selectQry);
                                             foreach ($skill_list as $key => $skill) {
 
@@ -180,7 +180,7 @@
                                                     <td class="text-center">
                                                         <ul class="icons-list">
                                                             <li><a href="update_skill.php?skill_id=<?php echo $skill['id'] ?>"><i class=" icon-pencil7"></i></a>
-                                                            <li><a href="#"><i class="icon-trash"></i></a></li>
+                                                            <li><a href="./config/DeleteControlar/skillDelete_controlar.php?skill_id=<?php echo $skill['id'] ?>"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>
                                                     </td>
