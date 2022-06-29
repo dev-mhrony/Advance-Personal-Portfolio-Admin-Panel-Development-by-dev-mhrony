@@ -57,11 +57,29 @@
 
                     ?>
 
+
+
+                    <!-- Retun Message to Submite Info Start -->
+                    <?php
+                    if (isset($_GET['msg'])) {
+
+                    ?>
+
+                        <div class="alert bg-success alert-styled-left">
+                            <button type="button" class="close" data-dismiss="alert"><span>&times;</span><span class="sr-only">Close</span></button>
+                            <span class="text-semibold">Good Job</span>
+                            <?php echo $_GET['msg'] ?>
+                        </div>
+
+                    <?php } ?>
+
+                    <!-- Retun Message to Submite Info End -->
+
                     <!-- Horizontal form modal -->
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h5 class="modal-title">Update About Info</h5>
+
+                            <h5 class="modal-title">Update <code>About</code> Info</h5>
                         </div>
 
 
