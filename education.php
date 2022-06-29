@@ -169,7 +169,7 @@
                                         <tbody>
 
                                             <?php
-                                            $selectQry = "SELECT * FROM education";
+                                            $selectQry = "SELECT * FROM education WHERE status=1";
                                             $education_list = mysqli_query($db_config, $selectQry);
                                             foreach ($education_list as $key => $education) {
 
@@ -196,7 +196,7 @@
                                                     <td class="text-center">
                                                         <ul class="icons-list">
                                                             <li><a href="update_education.php?edu_id=<?php echo $education['id'] ?>"><i class=" icon-pencil7"></i></a>
-                                                            <li><a href="#"><i class="icon-trash"></i></a></li>
+                                                            <li><a href="./config/DeleteControlar/eduDelete_controlar.php?edu_id=<?php echo $education['id'] ?>"><i class="icon-trash"></i></a></li>
                                                             </li>
                                                         </ul>
                                                     </td>
