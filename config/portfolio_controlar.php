@@ -4,6 +4,7 @@ include "./server_connect.php";
 
 if (isset($_POST["addPortfolio"])) {
 
+    $upload_status = false;
     if (isset($_FILES['image'])) {
         $mainFileArray      = $_FILES['image'];
         $file_name          = $mainFileArray['name'];
@@ -17,7 +18,9 @@ if (isset($_POST["addPortfolio"])) {
         $rendome_file_name = time() . "." . $file_extention;
 
         if (in_array($file_extention, $validExtention)) {
+
             move_uploaded_file($file_temp_location, '../Upload/PortfolioUpload/' . $rendome_file_name);
+            $upload_status = true;
         } else {
             $message = $file_extention . " is not Suported";
         }
@@ -25,7 +28,7 @@ if (isset($_POST["addPortfolio"])) {
         echo "File not Found";
     }
 
-    die("abc");
+
     $projectName = $_POST['projectName'];
     $projectBio = $_POST['projectBio'];
     $catagory = $_POST['catagory'];
@@ -36,7 +39,7 @@ if (isset($_POST["addPortfolio"])) {
     if (empty($projectName) || empty($projectBio) || empty($catagory) || empty($cintName) || empty($projectLanguage) || empty($projectPreview)) {
         $message = "All File Required";
     } else {
-        $insert_portfolio = "INSERT INTO `portfolio`(`project_name`, `project_bio`, `category`, `clint_name`, `project_language`, `project_preview_link`) VALUES ('$projectName','$projectBio','$catagory','$cintName','$projectLanguage','$projectPreview')";
+        $insert_portfolio = "INSERT INTO `portfolio`(`project_name`, `project_bio`, `category`, `clint_name`, `project_language`, `project_preview_link`, 'image') VALUES ('$projectName','$projectBio','$catagory','$cintName','$projectLanguage','$projectPreview', '$rendome_file_name')";
 
         $insert_port_list = mysqli_query($db_config, $insert_portfolio);
 
