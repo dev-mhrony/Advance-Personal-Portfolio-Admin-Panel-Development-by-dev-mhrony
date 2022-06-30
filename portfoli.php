@@ -81,7 +81,7 @@
                                                     <h5 class="modal-title">Portfolio Update</h5>
                                                 </div>
 
-                                                <form action="./config/portfolio_controlar.php" class="form-horizontal" method="POST">
+                                                <form action="./config/portfolio_controlar.php" class="form-horizontal" method="POST" enctype="multipart/form-data">
                                                     <div class="modal-body">
                                                         <div class="form-group">
                                                             <label class="control-label col-sm-3" for="ProjectName">Project Name</label>
@@ -130,7 +130,7 @@
                                                         <div class="form-group">
                                                             <label class="control-label col-sm-3" for="Image">Image</label>
                                                             <div class="col-sm-9">
-                                                                <input type="file" class="form-control" id="Image">
+                                                                <input type="file" class="form-control" id="Image" name="image">
                                                             </div>
                                                         </div>
                                                     </div>

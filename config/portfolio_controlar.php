@@ -3,6 +3,29 @@
 include "./server_connect.php";
 
 if (isset($_POST["addPortfolio"])) {
+
+    if (isset($_FILES['image'])) {
+        $mainFileArray      = $_FILES['image'];
+        $file_name          = $mainFileArray['name'];
+        $file_temp_location = $mainFileArray['tmp_name'];
+        $file_size          = $mainFileArray['size'];
+
+        $file_extArry = explode(".", $file_name);
+        $file_extention = strtolower(end($file_extArry));
+        $validExtention = array('jpg', 'jpeg', 'png');
+
+        $rendome_file_name = time() . "." . $file_extention;
+
+        if (in_array($file_extention, $validExtention)) {
+            move_uploaded_file($file_temp_location, '../Upload/PortfolioUpload/' . $rendome_file_name);
+        } else {
+            $message = $file_extention . " is not Suported";
+        }
+    } else {
+        echo "File not Found";
+    }
+
+    die("abc");
     $projectName = $_POST['projectName'];
     $projectBio = $_POST['projectBio'];
     $catagory = $_POST['catagory'];
