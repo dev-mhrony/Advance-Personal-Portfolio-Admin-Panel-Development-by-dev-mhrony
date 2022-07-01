@@ -226,8 +226,8 @@
                                                     <td><?php echo $portfolio['clint_name'] ?></td>
                                                     <td><?php echo $portfolio['project_language'] ?></td>
                                                     <td><?php echo $portfolio['project_preview_link'] ?></td>
-                                                    <td><img src="" alt="not found">
-                                                        <?php echo $portfolio['image'] ?> </td>
+                                                    <td><img src="<?php echo './Upload/PortfolioUpload/' . $portfolio['image'] ?>" alt="not found" width="140px" height="80px">
+                                                    </td>
                                                     <td><span class="label label-success"><?php echo $status ?></span>
                                                     </td>
                                                     <td class="text-center">
